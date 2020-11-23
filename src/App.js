@@ -1,13 +1,12 @@
 import React from 'react';
-// import { connect } from 'react-redux';
+import {connect} from 'react-redux'
+import {fetchEras} from './actions/fetchEras'
 
 class App extends React.Component {
 
-  // componentDidMount(){
-  //   fetch('http://localhost:3000/api/v1')
-  //   .then(resp => resp.json())
-  //   .then(data => console.log(data))
-  // }
+  componentDidMount(){
+    this.props.fetchEras()
+  }
 
   render() {
     return (
@@ -17,7 +16,17 @@ class App extends React.Component {
     );
 
   }
+}
+//way of accessing values in our store as props!
+// const mapStateToProps = () => {
+//   return {
+//     eras: state.eras
+//   }
+// }
+
+//gives us ability to dispatch new actions to our store directly from this component
+const mapDispatchToProps = () => {
 
 }
 
-export default App;
+export default connect(null, {fetchEras})(App);
