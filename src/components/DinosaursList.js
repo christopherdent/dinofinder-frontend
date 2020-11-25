@@ -6,7 +6,9 @@ import DinosaurInput from '..components/DinosaurInput'
 const Dinosaurs = (props) => {
 
   return (
-    <div>List of Dinosaurs</div>
+    <div>
+      List of Dinosaurs
+    </div>
   )
 
 }

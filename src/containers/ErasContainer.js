@@ -1,7 +1,6 @@
 import React from 'react'
-
-import ErasList from '../components/ErasList'
 import {connect} from 'react-redux'
+import ErasList from '../components/ErasList'
 import {fetchEras} from '../actions/fetchEras'
 
 
@@ -9,13 +8,14 @@ class ErasContainer extends React.Component {
 
 
   componentDidMount(){
-    this.props.fetchEras()
+    this.props.fetchEras()   ///accessing the function through props (instead of on its own) allows us to connect function with Redux Store
   }
 
   render(){
     return (
       <div className="container">
-        <div className="center"><ErasList eras={this.props.eras}/></div>
+
+        <div className="center"><ErasList eras={this.props.eras.eras}/></div>
       </div>
     )
   }
@@ -23,14 +23,13 @@ class ErasContainer extends React.Component {
 }
 
 //get redux store and map it to props.  sucessfully getting the eras from our state!
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
     eras: state.eras
   }
 }
 
-const mapDispatchToProps = () => {
-
-}
+// const mapDispatchToProps = () => {
+// }
 
 export default connect(mapStateToProps, {fetchEras})(ErasContainer)

@@ -10,7 +10,7 @@ import { combineReducers } from "redux";
 import App from './App';
 
 const rootReducer = combineReducers({
-  eras: erasReducer,
+  eras: erasReducer, //this causes the unwanted nesting.
   dinotypes: dinoTypesReducer,
   dinosaurs: dinosaursReducer
 })

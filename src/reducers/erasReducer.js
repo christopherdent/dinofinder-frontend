@@ -1,9 +1,10 @@
-export default function erasReducer(state = {eras: []}, action){
+export default function erasReducer(state = { eras: [] }, action) {
 
   switch (action.type) {
+
     case 'FETCH_ERAS':
       return { eras: action.payload }
-    default:
+   default:
       return state
     }
 }
