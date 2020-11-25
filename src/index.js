@@ -4,14 +4,20 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 import dinosaursReducer from './reducers/dinosaursReducer'
-
+import erasReducer from './reducers/erasReducer'
+import dinoTypesReducer from './reducers/dinoTypesReducer'
+import { combineReducers } from "redux";
 import App from './App';
 
-//set up store
+const rootReducer = combineReducers({
+  eras: erasReducer,
+  dinotypes: dinoTypesReducer,
+  dinosaurs: dinosaursReducer
+})
 
 const composeEnhancers =  window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-let store = createStore(dinosaursReducer, composeEnhancers(applyMiddleware(thunk)))
+let store = createStore(rootReducer, composeEnhancers(applyMiddleware(thunk)))
 
 ReactDOM.render(
   <React.StrictMode>

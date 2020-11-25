@@ -1,17 +1,19 @@
 import React from 'react';
 import {connect} from 'react-redux'
 import {fetchEras} from './actions/fetchEras'
+import ErasContainer from './containers/ErasContainer'
+
 
 class App extends React.Component {
 
-  componentDidMount(){
-    this.props.fetchEras()
-  }
+
 
   render() {
     return (
       <div className="App">
-        Dino App Here
+
+        <ErasContainer />
+
       </div>
     );
 
@@ -29,4 +31,4 @@ const mapDispatchToProps = () => {
 
 }
 
-export default connect(null, {fetchEras})(App);
+export default connect(null)(App);

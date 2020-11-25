@@ -1,4 +1,4 @@
-export default function dinosaurResucer(state = {dinosaurs: []}, action){
+export default function dinosaursResducer(state = {dinosaurs: []}, action){
 
-  return state 
+  return state
 }
