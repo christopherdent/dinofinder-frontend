@@ -1,4 +1,9 @@
 export default function dinoTypesReducer(state = {dinotypes: []}, action){
-
-  return state
+ 
+  switch (action.type) {
+    case 'FETCH_DINOTYPES':
+      return { dinotypes: action.payload }
+   default:
+      return state
+    }
 }

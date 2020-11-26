@@ -14,8 +14,7 @@ class ErasContainer extends React.Component {
   render(){
     return (
       <div className="container">
-
-        <div className="center"><ErasList eras={this.props.eras.eras}/></div>
+        <div><ErasList eras={this.props.eras.eras}/></div>
       </div>
     )
   }

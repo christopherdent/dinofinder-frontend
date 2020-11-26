@@ -22,4 +22,4 @@ const mapStateToProps = (state) => {
     dinosaurs: state.dinosaurs
   }
 }
-export default connect(mapStateToProps)(Dinosaurs)
+export default connect(mapStateToProps)(DinosaursContainer)
