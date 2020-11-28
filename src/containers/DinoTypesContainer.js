@@ -6,17 +6,25 @@ import {fetchDinoTypes} from '../actions/fetchDinoTypes'
 
 class DinoTypesContainer extends React.Component {
 
+  constructor(props) {
+    super(props);
+    this.routeParam = props.match.params.name;
+  }
+
+
+
 //can you add an argument to fetchDinoTypes so when it fetches, it only fetches the ones from that era?  Can it get era info from URL?
   componentDidMount(){
-    this.props.fetchDinoTypes()
-    
+
+      this.props.fetchDinoTypes()
   }
 
   render(){
     return (
       <div className="container">
       <div><DinoTypesList dinotypes={this.props.dinotypes.dinotypes}/></div>
-      <div></div>
+
+      <div><fetchDinoTypes url={this.routeParam} /></div>
     </div>
     )
   }
@@ -26,8 +34,8 @@ class DinoTypesContainer extends React.Component {
 
 const mapStateToProps = (state) => {
   return {
-    dinotypes: state.dinotypes
-  }
+    dinotypes: state.dinotypes,
+    }
 }
 
 export default connect(mapStateToProps, {fetchDinoTypes} )(DinoTypesContainer)
