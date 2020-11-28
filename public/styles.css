@@ -17,7 +17,7 @@
 }
 .card
 {
-  height: 300px;
+  min-height: 300px;
   width: 300px;
   flex: 1;
 
@@ -39,9 +39,9 @@
     flex: 1;
 }
 
-img {
+/* img {
     width: 100px; // how much you want
     min-height: 100px;
     float: left;
     margin: 10px;
-}
+} */

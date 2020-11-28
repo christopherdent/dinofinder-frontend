@@ -5,7 +5,7 @@ import DinoTypesContainer from './containers/DinoTypesContainer'
 import DinosaursContainer from './containers/DinosaursContainer'
 import DinosaurInput from './components/DinosaurInput'
 import {BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-
+import { Link } from 'react-router-dom';
 
 class App extends React.Component {
 
@@ -15,8 +15,10 @@ class App extends React.Component {
     return (
       <Router>
       <div className="App">
+        <Link to='./'>
         <h1 className='text-center'>DinoFinder 2020</h1>
-        <Switch>
+        </Link>
+      <Switch>
           <Route exact path='/' component={ErasContainer} />
           <Route exact path='/dino_types' component={DinoTypesContainer} />
           <Route exact path='/dino_types/:id' component={DinoTypesContainer} />

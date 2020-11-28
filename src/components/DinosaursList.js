@@ -1,18 +1,18 @@
-import React from 'react'
-
-
+import React from 'react';
+import DinosaurCard from './DinosaurCard'
 
 
 ///will be responsible for rendering a list of dinosaurs
-const Dinosaurs = (props) => {
+const DinosaursList = (props) => {
 
   return (
     <div>
-      List of Dinosaurs
+      <div className='row'>
+        <DinosaurCard dinosaurs = {props.dinosaurs} />
+      </div>
     </div>
   )
-
 }
 
 
-export default Dinosaurs
+export default DinosaursList
