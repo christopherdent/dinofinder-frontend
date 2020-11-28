@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const DinoTypeCard = (props) => {
-
+ 
   return (
 
     props.dinotypes.map(dinotype =>
@@ -15,7 +15,7 @@ const DinoTypeCard = (props) => {
 
       </Link>
       </div>)
-  )
+   )
 }
 
 export default DinoTypeCard

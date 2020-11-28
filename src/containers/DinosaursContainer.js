@@ -1,6 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import DinosaursList from '../components/DinosaursList'
+import DinoTypeSlugs from '../components/DinoTypeSlugs'
 import DinosaurInput from '../components/DinosaurInput'
 import {fetchDinosaurs} from '../actions/fetchDinosaurs'
 

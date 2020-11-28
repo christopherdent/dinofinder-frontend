@@ -1,3 +1,4 @@
+
 export function fetchDinosaurs() {
 return (dispatch) => {
 
@@ -9,3 +10,6 @@ return (dispatch) => {
     }))
   }
 }
+
+
+export default fetchDinosaurs
