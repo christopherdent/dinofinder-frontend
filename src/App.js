@@ -15,13 +15,15 @@ class App extends React.Component {
     return (
       <Router>
       <div className="App">
-        <Link to='./'>
+        <Link to='/'>
         <h1 className='text-center'>DinoFinder 2020</h1>
         </Link>
       <Switch>
           <Route exact path='/' component={ErasContainer} />
           <Route exact path='/dino_types' component={DinoTypesContainer} />
-          <Route exact path='/dino_types/:id' component={DinoTypesContainer} />
+          <Route exact path='/:name/dino_types' component={DinoTypesContainer} />
+          <Route exact path='/:name/dinosaurs' component={DinosaursContainer} />
+          <Route exact path='/:id/dinosaurs' component={DinosaursContainer} />
           <Route exact path='/dinosaurs' component={DinosaursContainer} />
           <Route exact path='/dinosaurs-input' component={DinosaurInput} />
         </Switch>

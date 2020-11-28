@@ -13,8 +13,8 @@ const eraCard = props.eras.map(era => <div key={era.id} className='card'><img sr
       <h2 className = 'text-center'>
         Choose an Era to Begin
       </h2>
-    
-      <div className='row'>
+
+      <div className="d-flex mt-5 justify-content-center">
         <EraCard eras={props.eras} />
 
       </div>

@@ -2,12 +2,12 @@ import React from 'react';
 import DinosaurCard from './DinosaurCard'
 
 
-///will be responsible for rendering a list of dinosaurs
+///will be responsible for rendering dinosaur cards
 const DinosaursList = (props) => {
 
   return (
     <div>
-      <div className='row'>
+      <div className="d-flex mt-5 justify-content-center">
         <DinosaurCard dinosaurs = {props.dinosaurs} />
       </div>
     </div>

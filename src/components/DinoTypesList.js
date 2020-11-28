@@ -5,19 +5,17 @@ import DinoTypeCard from './DinoTypeCard'
 
 const DinoTypesList = (props) => {
 
-const dinoTypeCard = props.dinotypes.map(dinotype => <div key={dinotype.id} className='card'><p>{dinotype.name}</p></div>)  //probably make this its own component too
 
   return (
        <div>
          <h2 className = 'text-center'>
            And what type of creatures are you looking for?
          </h2>
-         <Link to='./dinosaurs'>
-         <div className='row'>
-           <DinoTypeCard dinotypes={props.dinotypes} />
 
+           <div className='row'>
+           <DinoTypeCard dinotypes={props.dinotypes} />
          </div>
-         </Link>
+
        </div>
 
   )

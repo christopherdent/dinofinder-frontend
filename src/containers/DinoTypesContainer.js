@@ -6,8 +6,10 @@ import {fetchDinoTypes} from '../actions/fetchDinoTypes'
 
 class DinoTypesContainer extends React.Component {
 
+//can you add an argument to fetchDinoTypes so when it fetches, it only fetches the ones from that era?  Can it get era info from URL?
   componentDidMount(){
-    this.props.fetchDinoTypes()   ///accessing the function through props (instead of on its own) allows us to connect function with Redux Store
+    this.props.fetchDinoTypes()
+    
   }
 
   render(){
