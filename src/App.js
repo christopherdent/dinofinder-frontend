@@ -23,8 +23,6 @@ class App extends React.Component {
           <Route exact path='/dino_types' component={DinoTypesContainer} />
           <Route exact path='/:name/dino_types' component={DinoTypesContainer} />
           <Route exact path='/:name/dinosaurs' component={DinosaursContainer} />
-          <Route exact path='/:id/dinosaurs' component={DinosaursContainer} />
-          <Route exact path='/dinosaurs' component={DinosaursContainer} />
           <Route exact path='/dinosaurs-input' component={DinosaurInput} />
         </Switch>
 
