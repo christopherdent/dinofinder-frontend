@@ -1,7 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import DinoTypesList from '../components/DinoTypesList'
-import {FetchDinoTypes} from '../actions/fetchDinoTypes'
+import {fetchDinoTypes} from '../actions/fetchDinoTypes'
 
 
 class DinoTypesContainer extends React.Component {
@@ -15,13 +15,12 @@ class DinoTypesContainer extends React.Component {
   }
   //can you add an argument to fetchDinoTypes so when it fetches, it only fetches the ones from that era?  Can it get era info from URL?
 componentDidMount(){
-    this.props.FetchDinoTypes(this.state.url)
+    this.props.fetchDinoTypes(this.state.url)
   }
 
   render(){
     return (
       <div className="container">
-        <div><FetchDinoTypes url={this.state.url} /></div>
         <div><DinoTypesList dinotypes={this.props.dinotypes.dinotypes}/></div>
       </div>
     )
@@ -38,4 +37,4 @@ const mapStateToProps = (state) => {
 }
 
 
-export default connect(mapStateToProps, {FetchDinoTypes} )(DinoTypesContainer)
+export default connect(mapStateToProps, {fetchDinoTypes} )(DinoTypesContainer)
