@@ -20,10 +20,9 @@ class App extends React.Component {
         </Link>
       <Switch>
           <Route exact path='/' component={ErasContainer} />
-          <Route exact path='/dino_types' component={DinoTypesContainer} />
           <Route exact path='/:name/dino_types' component={DinoTypesContainer} />
           <Route exact path='/:name/dinosaurs' component={DinosaursContainer} />
-          <Route exact path='/dinosaurs-input' component={DinosaurInput} />
+          <Route exact path='/dinosaurs/new' component={DinosaurInput} />
         </Switch>
 
       </div>
