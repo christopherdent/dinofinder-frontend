@@ -37,7 +37,9 @@ class DinosaursContainer extends React.Component {
     return (
       <div className="container">
         <div className="text-center">
-          <button type="button" className="btn btn-primary" onClick={() => this.hideComponent("showHide")}>Add Dinosaur to Collection</button>
+          <button type="button" className="btn btn-primary" onClick={() => this.hideComponent("showHide")}>
+            {showHide === false ? "Add Dinosaur to Collection" : "Hide Form"}
+          </button>
         </div>
           <div> {showHide && <DinosaurInput />} <hr /></div>
           <div><DinosaursList dinosaurs={this.props.dinosaurs.dinosaurs}/></div>

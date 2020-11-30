@@ -4,3 +4,14 @@ Nov 28:  All routes seem to be working well; react router names interpolated int
 Next step:  Incorporate CRUD
 
 Stretch:  add a user model
+
+Nov 29:
+-Next steps:  Consolidate table using bootstrap
+-Implement delete and edit steps!
+-CSS:- need to fix the card situation.  
+
+
+Nove 30:
+
+CRITICAL:  Edit and Delete Dinos.  Start with Delete.  This is critical.
+Second priority:  Just make it look good with bootstrap.  Then submit the thing.  

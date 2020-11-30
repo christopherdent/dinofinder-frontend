@@ -1,11 +1,9 @@
-import React from 'react';
+
 
 export const fetchDinoTypes = (url) => {
 
 ///pseudocode  if eraname=triassic, let url equal 1
 //if eraname = jurassic, let url equal 2..
-
-
 
 let slug = (url === 'Triassic') ? ('1') : ((url === 'Jurassic') ? ('2') : ('3'))
 

@@ -5,7 +5,7 @@ const DinosaurCard = (props) => {
   <>
       {props.dinosaurs.map(dinosaur => <div
         key={dinosaur.id}
-        className='card'>
+        className='card w-75'>
         <img src = {dinosaur.picture_url} />
         <p>{dinosaur.name}</p>
         <p>Size: {dinosaur.size} feet </p>
