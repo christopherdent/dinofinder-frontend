@@ -15,3 +15,6 @@ Nove 30:
 
 CRITICAL:  Edit and Delete Dinos.  Start with Delete.  This is critical.
 Second priority:  Just make it look good with bootstrap.  Then submit the thing.  
+
+
+you also need form validations so they cant submit a blank form 

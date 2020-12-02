@@ -22,6 +22,10 @@ class DinosaursContainer extends React.Component {
      this.props.fetchDinosaurs(this.state.url)   ///accessing the function through props (instead of on its own) allows us to connect function with Redux Store
   }
 
+  componentDidUpdate(){   ///this seems to have solved issue of dino not appearing on add and not disappearing on delete... but why?
+      this.props.fetchDinosaurs(this.state.url)
+    }
+
 
   hideComponent(name) {
     if (name === 'showHide') {
@@ -52,6 +56,13 @@ const mapStateToProps = (state) => {
   return {
     dinosaurs: state.dinosaurs,
     url: state.url
+  }
+}
+
+const mapDispatchToProps = dispatch => {
+  return {
+    addDinosaur: dinosaur => dispatch ({type: 'ADD_DINOSAUR', payload: dinosaur}),
+    deleteDinosaur: id => dispatch({type: 'DELETE_DINOSAUR', payload: id })
   }
 }
 

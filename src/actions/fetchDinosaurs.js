@@ -1,18 +1,6 @@
 
 export function fetchDinosaurs(url) {
 
-  // function dinoSelector() {
-  //
-  //   switch (action.type) {
-  //
-  //     case 'FETCH_ERAS':
-  //       return { eras: action.payload }
-  //    default:
-  //       return state
-  //     }
-  // }
-
-
 return (dispatch) => {
 
   const dinoSelector = (url) => {

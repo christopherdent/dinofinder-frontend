@@ -18,6 +18,9 @@ componentDidMount(){
     this.props.fetchDinoTypes(this.state.url)
   }
 
+
+
+
   render(){
     return (
       <div className="container">
