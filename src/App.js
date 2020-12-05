@@ -4,6 +4,7 @@ import ErasContainer from './containers/ErasContainer'
 import DinoTypesContainer from './containers/DinoTypesContainer'
 import DinosaursContainer from './containers/DinosaursContainer'
 import DinosaurInput from './components/DinosaurInput'
+import DinosaurEdit from './components/DinosaurEdit'
 import {BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import { Link } from 'react-router-dom';
 
@@ -11,7 +12,11 @@ class App extends React.Component {
 
 
 
+
   render() {
+
+
+
     return (
       <Router>
       <div className="App">
@@ -23,6 +28,7 @@ class App extends React.Component {
           <Route exact path='/:name/dino_types' component={DinoTypesContainer} />
           <Route exact path='/:name/dinosaurs' component={DinosaursContainer} />
           <Route exact path='/dinosaurs/new' component={DinosaurInput} />
+          <Route exact path='/dinosaurs/:name/edit' component={DinosaurEdit} />
         </Switch>
 
       </div>
@@ -34,7 +40,9 @@ class App extends React.Component {
 //way of accessing values in our store as props!
 // const mapStateToProps = () => {
 //   return {
-//     eras: state.eras
+//     eras: this.state.eras,
+//     dinosaurs: this.state.dinosaurs
+//
 //   }
 // }
 

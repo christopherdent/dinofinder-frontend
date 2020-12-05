@@ -5,7 +5,6 @@ import DinosaurInput from '../components/DinosaurInput'
 import {fetchDinosaurs} from '../actions/fetchDinosaurs'
 
 
-
 class DinosaursContainer extends React.Component {
 
   constructor(props) {
@@ -22,9 +21,9 @@ class DinosaursContainer extends React.Component {
      this.props.fetchDinosaurs(this.state.url)   ///accessing the function through props (instead of on its own) allows us to connect function with Redux Store
   }
 
-  componentDidUpdate(){   ///this seems to have solved issue of dino not appearing on add and not disappearing on delete... but why?
-      this.props.fetchDinosaurs(this.state.url)
-    }
+  // componentDidUpdate(){   ///this seems to have solved issue of dino not appearing on add and not disappearing on delete... but why?
+  //     this.props.fetchDinosaurs(this.state.url)
+  //   }
 
 
   hideComponent(name) {
@@ -33,7 +32,7 @@ class DinosaursContainer extends React.Component {
     }
   }
 
-
+          // <Route path='/dinosaurs/:name/edit' render={(routerProps) => <DinosaurEdit {...routerProps} dinosaurs={this.props.dinosaurs.dinosaurs}/>}/>
 
   render(){
      const { showHide } = this.state;
@@ -47,6 +46,7 @@ class DinosaursContainer extends React.Component {
         </div>
           <div> {showHide && <DinosaurInput />} <hr /></div>
           <div><DinosaursList dinosaurs={this.props.dinosaurs.dinosaurs}/></div>
+
       </div>
       )
     }

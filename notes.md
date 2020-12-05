@@ -17,4 +17,7 @@ CRITICAL:  Edit and Delete Dinos.  Start with Delete.  This is critical.
 Second priority:  Just make it look good with bootstrap.  Then submit the thing.  
 
 
-you also need form validations so they cant submit a blank form 
+you also need form validations so they cant submit a blank form
+Dec 2:
+Need to figure out how to get dinosaur props to the edit dino form so it can prepopulate.  DONE.
+Return to default checking of radio button for era later.  
