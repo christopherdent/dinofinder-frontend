@@ -15,9 +15,13 @@ Nove 30:
 
 CRITICAL:  Edit and Delete Dinos.  Start with Delete.  This is critical.
 Second priority:  Just make it look good with bootstrap.  Then submit the thing.  
-
-
 you also need form validations so they cant submit a blank form
-Dec 2:
+
+Dec 2 Next Steps:  
 Need to figure out how to get dinosaur props to the edit dino form so it can prepopulate.  DONE.
 Return to default checking of radio button for era later.  
+
+Dec 4 Next Steps:
+-See if there is a better way to have instant changes to dinocard / dinocontainer on add / edit - probably just update state with new values instead of re-fetching?
+-Must get default radio button for dinosaur edit.  
+-Must add form validations so user can't submit a blank form

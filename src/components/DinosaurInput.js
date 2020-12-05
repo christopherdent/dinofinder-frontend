@@ -2,8 +2,7 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {addDinosaur} from '../actions/addDinosaur'
 
-///I'd like this to be a modal if i can figure that out
-//you also need an ERA field, so that the dinosaur is added to the right era....
+
 class DinosaurInput extends React.Component {
 state = {
   name: '',
@@ -44,7 +43,7 @@ handleOnSubmit = (event) => {
       <div>
         <h5>Add a Dinosaur</h5>
         <small>HINT: You can find most of the info below from <a href="https://en.wikipedia.org/wiki/Dinosaur">Wikipedia.</a></small>
-        <br /> <br /> 
+        <br /> <br />
         <form onSubmit={this.handleOnSubmit}>
           <small>
 

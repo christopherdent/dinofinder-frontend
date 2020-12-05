@@ -2,23 +2,24 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux'
 import {deleteDinosaur} from '../actions/deleteDinosaur'
 import DinosaurEdit from '../components/DinosaurEdit'
-import {Link} from 'react-router-dom'
 import Button from '../components/Button'
-
-import {BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-
 
 class DinosaurCard extends Component {
 
   constructor(props) {
     super(props);
     this.state = {
-
-          dinosaur: ''
+        showHide: false,
+        dinosaur: ''
       };
-
+      this.hideComponent = this.hideComponent.bind(this);
     }
 
+    hideComponent(name) {
+      if (name === 'showHide') {
+        this.setState({ showHide: !this.state.showHide });
+      }
+    }
 
   handleDelete = (dinosaur) => {
     this.props.deleteDinosaur(dinosaur.id, dinosaur.dino_type.id, dinosaur.dino_type.era_id)
@@ -28,7 +29,7 @@ class DinosaurCard extends Component {
 
 render() {
 
-
+     const { showHide } = this.state;
 
   return (
    <div>
@@ -38,7 +39,7 @@ render() {
         key={dinosaur.id}
         className='card w-75'>
 
-        <img src = {dinosaur.picture_url} />
+        <img src = {dinosaur.picture_url} alt = 'Artist impression of {dinosaur.name}' />
         <p>{dinosaur.name}</p>
         <p>Size: {dinosaur.size} feet </p>
         <p>Weight: {dinosaur.weight} pounds </p>
@@ -46,19 +47,23 @@ render() {
         <p>Years Lived: {dinosaur.temporal_range}</p>
         <p>{dinosaur.summary}</p>
 
-        <DinosaurEdit
-          dinoId = {dinosaur.id}
-          dinoName = {dinosaur.name}
-          dinoSize = {dinosaur.size}
-          dinoWeight = {dinosaur.weight}
-          dinoRange = {dinosaur.temporal_range}
-          dinoYear = {dinosaur.year_discovered}
-          dinoPic = {dinosaur.picture_url}
-          dinoSummary = {dinosaur.summary}
-          dinoTypeId = {dinosaur.dino_type_id}
+  <div className="text-center">
+    <button type="button" className="btn btn-primary" onClick={() => this.hideComponent("showHide")}>
+      {showHide === false ? "Edit Dinosaur" : "Hide Form" }
+    </button>
+  </div>
+    <div> {showHide && <DinosaurEdit
+              dinoId = {dinosaur.id}
+              dinoName = {dinosaur.name}
+              dinoSize = {dinosaur.size}
+              dinoWeight = {dinosaur.weight}
+              dinoRange = {dinosaur.temporal_range}
+              dinoYear = {dinosaur.year_discovered}
+              dinoPic = {dinosaur.picture_url}
+              dinoSummary = {dinosaur.summary}
+              dinoTypeId = {dinosaur.dino_type_id}
 
-          />
-
+              />} <hr /></div>
     <Button dinosaur={dinosaur} handleDelete = {this.handleDelete} />
         </div>)}
       </div>

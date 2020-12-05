@@ -69,7 +69,7 @@ handleOnSubmit = (event) => {
     return (
       <div>
         <h5>Edit {this.props.dinosaurName} </h5>
-        <small>HINT: You can find most of the info below from <a href="https://en.wikipedia.org/wiki/Dinosaur">Wikipedia.</a></small>
+        <small>HINT: You can find most of the info below from <a href="https://en.wikipedia.org/wiki/Dinosaur">Wikipedia</a> or <a href="https://dinopedia.fandom.com/">DinoPedia</a></small>
         <br /> <br />
         <form onSubmit={this.handleOnSubmit}>
           <small>

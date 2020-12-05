@@ -23,6 +23,7 @@ class App extends React.Component {
         <Link to='/'>
         <h1 className='text-center'>DinoFinder 2020</h1>
         </Link>
+        
       <Switch>
           <Route exact path='/' component={ErasContainer} />
           <Route exact path='/:name/dino_types' component={DinoTypesContainer} />
