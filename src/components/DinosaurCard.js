@@ -64,7 +64,7 @@ render() {
               dinoTypeId = {dinosaur.dino_type_id}
 
               />} <hr /></div>
-    <Button dinosaur={dinosaur} handleDelete = {this.handleDelete} />
+            <center>  <Button dinosaur={dinosaur} handleDelete = {this.handleDelete} /> </center>
         </div>)}
       </div>
     )}

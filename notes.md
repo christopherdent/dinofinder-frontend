@@ -22,6 +22,9 @@ Need to figure out how to get dinosaur props to the edit dino form so it can pre
 Return to default checking of radio button for era later.  
 
 Dec 4 Next Steps:
+-Fix card CSS before going any further.
 -See if there is a better way to have instant changes to dinocard / dinocontainer on add / edit - probably just update state with new values instead of re-fetching?
 -Must get default radio button for dinosaur edit.  
 -Must add form validations so user can't submit a blank form
+-Try and get eraId into editDinosaur action so it can fetch to a more appropriate looking URL (although it will work anyway because of independent dinosaur IDs)
+-Bonus:  Can you remember how to get the % out of the Url?  did that in Rails project.

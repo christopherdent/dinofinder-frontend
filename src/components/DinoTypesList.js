@@ -12,7 +12,7 @@ const DinoTypesList = (props) => {
            And what type of creatures are you looking for?
          </h2>
 
-           <div className='row'>
+             <div className="d-flex mt-5 justify-content-center">
            <DinoTypeCard dinotypes={props.dinotypes} />
          </div>
 

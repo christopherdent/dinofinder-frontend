@@ -2,11 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const DinoTypeCard = (props) => {
- 
+
   return (
 
     props.dinotypes.map(dinotype =>
-      <div key={dinotype.id} className='card'>
+      <div key={dinotype.id} className='card w-75'>
 
       <img src = {dinotype.picture_url} alt='dinotype' className='card-img-top' />
 
