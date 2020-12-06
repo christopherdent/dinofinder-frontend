@@ -29,14 +29,18 @@ class DinosaurCard extends Component {
 
 render() {
 
-     const { showHide } = this.state;
-
+     const { showHide, dinosaur } = this.state;
+//note key below used to be dinosaur.id, changed it after watching quotes video, change back to dinosaur.id if unexpected behavior happens
   return (
    <div>
 
-      {this.props.dinosaurs.map(dinosaur =>
+     <div className="card card-inverse card-success card-primary mb-3 text-center">
+       <div className="card-block">
+
+
+      {this.props.dinosaurs.map((dinosaur, index) =>
         <div
-        key={dinosaur.id}
+        key={index}
         className='card w-75'>
 
         <img src = {dinosaur.picture_url} alt = 'Artist impression of {dinosaur.name}' />
@@ -66,9 +70,15 @@ render() {
               />} <hr /></div>
             <center>  <Button dinosaur={dinosaur} handleDelete = {this.handleDelete} /> </center>
         </div>)}
-      </div>
+      </div>  </div>  </div>
     )}
   }
 
+const mapStateToProps = state => {
+  return {
+    dinosaur: state.dinosaur,
+    showHide: state.showHide
+  }
+}
 
-export default connect(null, {deleteDinosaur})(DinosaurCard)
+export default connect(mapStateToProps, {deleteDinosaur})(DinosaurCard)

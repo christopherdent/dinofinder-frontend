@@ -3,7 +3,7 @@ import {connect} from 'react-redux'
 import DinosaursList from '../components/DinosaursList'
 import DinosaurInput from '../components/DinosaurInput'
 import {fetchDinosaurs} from '../actions/fetchDinosaurs'
-
+import {addDinosaur } from '../actions/addDinosaur'
 
 class DinosaursContainer extends React.Component {
 
@@ -12,17 +12,21 @@ class DinosaursContainer extends React.Component {
     this.state = {
           url: this.routeParam = props.match.params.name,
           showHide: false,
-          dinosaurs: ''
+          dinosaurs: props.dinosaurs.dinosaurs
       };
       this.hideComponent = this.hideComponent.bind(this);
     }
 
   componentDidMount(){
-     this.props.fetchDinosaurs(this.state.url)   ///accessing the function through props (instead of on its own) allows us to connect function with Redux Store
+
+     this.props.fetchDinosaurs(this.state.url)   ///accessing the function through props (instead of on its own) allows us to connect function with Redux Store; arg telling it which dinosaurs to fetch based on params
   }
 
-  componentDidUpdate(){   ///this seems to have solved issue of dino not appearing on add and not disappearing on delete... but why?
-      this.props.fetchDinosaurs(this.state.url)
+  componentDidUpdate(prevProps){   ///this seems to have solved issue of dino not appearing on add and not disappearing on delete... but why?
+
+    // if (this.props.dinosaurs !== prevProps.dinosaurs) {
+      // this.props.fetchDinosaurs(this.state.url)
+    //   }
     }
 
 
@@ -58,13 +62,5 @@ const mapStateToProps = (state) => {
   }
 }
 
-const mapDispatchToProps = dispatch => {
-  return {
-    addDinosaur: dinosaur => dispatch ({type: 'ADD_DINOSAUR', payload: dinosaur}),
-    deleteDinosaur: id => dispatch({type: 'DELETE_DINOSAUR', payload: id })
-  }
-}
 
-
-
-export default connect(mapStateToProps, {fetchDinosaurs})(DinosaursContainer)
+export default connect(mapStateToProps, {fetchDinosaurs, addDinosaur})(DinosaursContainer)   //here, fetchDinosaurs is sitting in for mapDispatchToProps and doing this makes IT a prop.

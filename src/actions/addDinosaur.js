@@ -1,7 +1,13 @@
-export const addDinosaur = (data) => {
+import {fetchDinosaurs} from '../actions/fetchDinosaurs'
+
+
+
+export const addDinosaur = (data, url) => {
+
+
 
   return (dispatch) => {
-    fetch("http://localhost:3000/api/v1/eras/1/dino_types/1/dinosaurs", {
+    return fetch("http://localhost:3000/api/v1/eras/1/dino_types/1/dinosaurs", {
       headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json'
@@ -10,7 +16,9 @@ export const addDinosaur = (data) => {
       body: JSON.stringify(data)
     })
     .then(response => response.json)
-    .then(dinosaur => dispatch({type: 'ADD_DINOSAUR', payload: dinosaur}))
+    .then(dinosaur =>
+      dispatch({type: 'ADD_DINOSAUR', payload: dinosaur})
+      )
   }
 }
 

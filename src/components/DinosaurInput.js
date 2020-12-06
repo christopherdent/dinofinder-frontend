@@ -22,7 +22,7 @@ handleOnChange = (event) => {
   })
 }
 
-handleOnSubmit = (event) => {
+handleOnSubmit = (event) => {   ///maybe add the fechdinosaurs call to this?
   event.preventDefault()
   this.props.addDinosaur(this.state)
   this.setState(
@@ -115,21 +115,23 @@ handleOnSubmit = (event) => {
 
       <div className="form-row align-items-center">
         <div className="col-auto">
-          <label>Dinosaur Name</label><br />
+          <label>Dinosaur Name</label><br /><br />
           <input type='text' name='name' placeholder='Dinosaur Name' value={this.state.name} onChange={this.handleOnChange} /><br />
         </div>
 
           <div className="col-auto">
-          <label>Dinosaur Size (in feet)</label><br />
+          <label>Dinosaur Size</label><br />
+          <small>In feet</small><br />
           <input type='number' name='size' placeholder='Dinosaur Size' value={this.state.size} onChange={this.handleOnChange} />
         </div>
         <div className="col-auto">
           <label>Dinosaur Weight</label><br />
+          <small><a href = 'https://www.google.com/search?q=convert+tons+to+pounds&oq=convert+tons+to+pounds'>Convert from tons</a></small><br />
           <input type='number' name='weight' placeholder='Dinosaur Weight' value={this.state.weight} onChange={this.handleOnChange} />
         </div>
 
         <div className="col-auto">
-        Temporal Range
+        <label>Temporal Range</label>
           <small id="passwordHelpBlock" className="form-text text-muted">When did it live? Example: 150-140 MYA)</small>
           <input type='text' name='temporal_range' placeholder='Temporal Range' value={this.state.temporal_range} onChange={this.handleOnChange} />
       </div>

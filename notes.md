@@ -28,3 +28,4 @@ Dec 4 Next Steps:
 -Must add form validations so user can't submit a blank form
 -Try and get eraId into editDinosaur action so it can fetch to a more appropriate looking URL (although it will work anyway because of independent dinosaur IDs)
 -Bonus:  Can you remember how to get the % out of the Url?  did that in Rails project.
+-I think i should remove dinosaursList component and merge it with dinosaur container and then make card a functional component - 

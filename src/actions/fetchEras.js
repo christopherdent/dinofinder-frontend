@@ -3,7 +3,7 @@
 
 export function fetchEras() {
 return (dispatch) => {
-  fetch('http://localhost:3000/api/v1/eras')
+  return fetch('http://localhost:3000/api/v1/eras')
   .then(resp => resp.json())
   .then(eras => dispatch({
       type: 'FETCH_ERAS',

@@ -1,9 +1,7 @@
 import React from 'react';
-import DinosaurCard from './DinosaurCard'
 
 
-
-///will be responsible for rendering dinosaur cards
+//only used for dinosaurs here but could potentially be used on components for eras or dino_types in the future if more were to be added.  
 const Button = (props) => {
 
   return (
