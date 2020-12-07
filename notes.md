@@ -28,4 +28,10 @@ Dec 4 Next Steps:
 -Must add form validations so user can't submit a blank form
 -Try and get eraId into editDinosaur action so it can fetch to a more appropriate looking URL (although it will work anyway because of independent dinosaur IDs)
 -Bonus:  Can you remember how to get the % out of the Url?  did that in Rails project.
--I think i should remove dinosaursList component and merge it with dinosaur container and then make card a functional component - 
+-I think i should remove dinosaursList component and merge it with dinosaur container and then make card a functional component -
+Dec 5:
+Today I realized that the page wasn't updating properly because the Redux store wasn't updating properly, and my dinoCard was getting convoluted anyway, so I have started a refactor
+of dinosaur container and dinocard (eliminating dinosaurlist) to try and fix that.  
+--collateral damage:- Add dinosaur / hide Form button no longer works; edit and delete buttons no longer work.
+-Card CSS largely fixed but they still need to be side by side
+-All other Dec 4 todos remain but I think this is still progress.  

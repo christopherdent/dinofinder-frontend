@@ -3,7 +3,7 @@ export function fetchDinosaurs(url) {
 
 return (dispatch) => {
 
-  const dinoSelector = (url) => {
+  const dinoTypeSelector = (url) => {
     let dino;
   switch (url) {
     case 'Triassic Herbivore':
@@ -49,7 +49,17 @@ return (dispatch) => {
     return dino
   }
 
-  return fetch(`http://localhost:3000/api/v1/eras/1/dino_types/${dinoSelector(url)}/dinosaurs`)  ///fetching to different urls based on the params from the first page.
+  const eraSelector = (url) => {
+    if (url.includes('Triassic')){
+      return 1
+    } else if (url.includes('Jurassic')){
+      return 2
+    } else if (url.includes('Cretaceous')){
+      return 3
+    }
+  }
+
+  return fetch(`http://localhost:3000/api/v1/eras/${eraSelector(url)}/dino_types/${dinoTypeSelector(url)}/dinosaurs`)  ///fetching to different urls based on the params from the first page.
   .then(resp => resp.json())
   .then(dinosaurs => dispatch({
       type: 'FETCH_DINOSAURS',

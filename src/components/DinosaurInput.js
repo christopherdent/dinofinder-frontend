@@ -24,7 +24,9 @@ handleOnChange = (event) => {
 
 handleOnSubmit = (event) => {   ///maybe add the fechdinosaurs call to this?
   event.preventDefault()
-  this.props.addDinosaur(this.state)
+ console.log('1')
+  this.props.addDinosaur(this.state, this.props.url)
+  console.log('2')
   this.setState(
     { name: '',
       size: '',
@@ -39,84 +41,43 @@ handleOnSubmit = (event) => {   ///maybe add the fechdinosaurs call to this?
 }
 
   render() {
+
     return (
       <div>
         <h5>Add a Dinosaur</h5>
-        <small>HINT: You can find most of the info below from <a href="https://en.wikipedia.org/wiki/Dinosaur">Wikipedia.</a></small>
+        <small>HINT: You can find most of the info below from <a href="https://en.wikipedia.org/wiki/Dinosaur">Wikipedia.</a>  At a minimum, please include the category, name and picture URL. </small>
         <br /> <br />
         <form onSubmit={this.handleOnSubmit}>
           <small>
 
           <label>Category: When did it live and what kind of dinosaur was it? </label><br />
-          <p>Triassic Period: 251.902–201.3 million years ago</p>
-            <div className="form-check form-check-inline">
-              <input type="radio" name="dino_type_id" value="1" onChange={this.handleOnChange} />
-              <label>Triassic Herbivore</label>
-            </div>
 
-            <div className="form-check form-check-inline">
-              <input type="radio" name="dino_type_id" value="2" onChange={this.handleOnChange} />
-              <label>Triassic Carnivore</label>
-            </div>
-
-            <div className="form-check form-check-inline">
-              <input type="radio" name="dino_type_id" value="3" onChange={this.handleOnChange} />
-              <label>Triassic Avian</label>
-            </div>
-
-            <div className="form-check form-check-inline">
-              <input type="radio" name="dino_type_id" value="4" onChange={this.handleOnChange} />
-              <label>  Triassic Marine</label><br />
-            </div>
-            <br /><br />
-            <p>Jurassic Period:  201.3–145 million years ago</p>
-            <div className="form-check form-check-inline">
-              <input type="radio" name="dino_type_id" value="5" onChange={this.handleOnChange} />
-              <label>  Jurassic Herbivore</label>
-            </div>
-
-            <div className="form-check form-check-inline">
-              <input type="radio" name="dino_type_id" value="6" onChange={this.handleOnChange} />
-              <label>  Jurassic Carnivore</label>
-            </div>
-
-            <div className="form-check form-check-inline">
-              <input type="radio" name="dino_type_id" value="7" onChange={this.handleOnChange} />
-              <label>  Jurassic Avian</label>
-            </div>
-
-            <div className="form-check form-check-inline">
-              <input type="radio" name="dino_type_id" value="8" onChange={this.handleOnChange} />
-              <label>Jurassic Marine</label> <br />
-            </div>
-            <br /><br />
-            <p>Cretaceous Period: 145–66 million years ago</p>
-            <div className="form-check form-check-inline">
-              <input type="radio" name="dino_type_id" value="9" onChange={this.handleOnChange} />
-              <label>Cretaceous Herbivore</label>
-            </div>
-
-            <div className="form-check form-check-inline">
-              <input type="radio" name="dino_type_id" value="10" onChange={this.handleOnChange} />
-              <label>Cretaceous Carnivore</label>
-            </div>
-
-            <div className="form-check form-check-inline">
-              <input type="radio" name="dino_type_id" value="11" onChange={this.handleOnChange} />
-              <label>Cretaceous Avian</label>
-            </div>
-
-            <div className="form-check form-check-inline">
-              <input type="radio" name="dino_type_id" value="12" onChange={this.handleOnChange} />
-              <label>Cretaceous Marine</label> <br />
-            </div>
+            <select className="form-control"
+              name="dino_type_id"
+              id="dino_type_id"
+              value={this.state.dino_type_id ? this.state.dino_type_id : ''}
+              onChange={this.handleOnChange}
+              required>
+              <option value=''></option>
+              <option value="1">Triassic Herbivore</option>
+              <option value="2">Triassic Carnivore</option>
+              <option value="3">Triassic Avian</option>
+              <option value="4">Triassic Marine</option>
+                <option value="5">Jurassic Herbivore</option>
+                <option value="6">Jurassic Carnivore</option>
+                <option value="7">Jurassic Avian</option>
+                <option value="8">Jurassic Marine</option>
+                  <option value="9">Cretaceous Herbivore</option>
+                  <option value="10">Cretaceous Carnivore</option>
+                  <option value="11">Cretaceous Avian</option>
+                  <option value="12">Cretaceous Marine</option>
+            </select>
             <br />          <br />
-
 
       <div className="form-row align-items-center">
         <div className="col-auto">
           <label>Dinosaur Name</label><br /><br />
-          <input type='text' name='name' placeholder='Dinosaur Name' value={this.state.name} onChange={this.handleOnChange} /><br />
+          <input type='text' name='name' placeholder='Dinosaur Name' value={this.state.name} onChange={this.handleOnChange} required/><br />
         </div>
 
           <div className="col-auto">
@@ -144,7 +105,7 @@ handleOnSubmit = (event) => {   ///maybe add the fechdinosaurs call to this?
 
   <div className="col-auto">
           <label>Picture URL</label><br />
-          <input type='url' name='picture_url' placeholder='Paste the URL of a picture of this dinosaur here.' value={this.state.picture_url} onChange={this.handleOnChange} /><br />
+          <input type='url' name='picture_url' placeholder='Paste the URL of a picture of this dinosaur here.' value={this.state.picture_url} onChange={this.handleOnChange} required /><br />
 
 </div>
 
