@@ -43,4 +43,9 @@ Dec 6 Notes and Next Steps:
 -DO NOT re-fetch in componentdidupdate, creates loop.  react should re-render automatically on state change.  
 -Dinosaur list component now redundant and will be removed.
 -Need to fix delete button and continue working on css.  Also EDIT FORM is still making a duplicate entry once the action is fired.  more work needed on keeping state up to date.  
--The problem is in my reducer.... 
+-The problem is in my reducer....
+December 8:
+-Fixed all fetch URL issues (they worked anyway due to independent dino IDs, but could hinder future enhancements without correct interpolation) - BUT consistency in approaches per action could be improved
+-CRUD all functional, reducers corrected
+-Redux state updating as desired
+-Remaining project is CSS
