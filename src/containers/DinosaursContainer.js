@@ -30,6 +30,7 @@ class DinosaursContainer extends React.Component {
   // }
 
 handleDelete = (dinosaur) => {
+  debugger
     this.props.deleteDinosaur(dinosaur.id, dinosaur.dino_type.id, dinosaur.dino_type.era_id)
   }
 
@@ -62,6 +63,7 @@ listDinos = () => {
                     <button type="button" className="btn btn-primary" onClick={() => this.hideComponent("showHide2")}>Edit</button>
 
             <div> {this.state.showHide2 && <DinosaurEdit
+                    dinosaur={dinosaur}
                     url={this.state.url}
                     dinoId = {dinosaur.id}
                     dinoName = {dinosaur.name}
@@ -71,12 +73,13 @@ listDinos = () => {
                     dinoYear = {dinosaur.year_discovered}
                     dinoPic = {dinosaur.picture_url}
                     dinoSummary = {dinosaur.summary}
+                    era = {dinosaur.dino_type.era_id}
                     dinoTypeId = {dinosaur.dino_type_id} />}
 
                       </div>
                 </div>)
               )
-            
+
             }
           }
 

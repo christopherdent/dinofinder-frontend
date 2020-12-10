@@ -15,7 +15,8 @@ class DinosaurEdit extends React.Component {
       year_discovered: this.props.dinoYear,
       picture_url: this.props.dinoPic,
       summary: this.props.dinoSummary,
-      dino_type_id: this.props.dinoTypeId
+      dino_type_id: this.props.dinoTypeId,
+      era_id: this.props.era
       }
     }
 
@@ -29,25 +30,12 @@ handleOnSubmit = (event) => {
   event.preventDefault()
   let dinosaur = {...this.state, id: this.state.id}
   this.props.editDinosaur(dinosaur)
-  this.setState(
-    { id: '',
-      name: '',
-      size: '',
-      weight: '',
-      temporal_range: '',
-      year_discovered: '',
-      picture_url: '',
-      summary: '',
-      dino_type_id: ''
-    }
-  )
 }
 
   render() {
 
     return (
       <div>
-        {this.state.dino_type_id}
         <h5>Edit a Dinosaur</h5>
         <small>HINT: You can find most of the info below from <a href="https://en.wikipedia.org/wiki/Dinosaur">Wikipedia.</a>  At a minimum, please include the category, name and picture URL. </small>
         <br /> <br />
@@ -78,6 +66,7 @@ handleOnSubmit = (event) => {
             </select>
             <br /> <br />
 
+            <input type='hidden' name='dino_type' value={this.props.dinoType} />
 
               <div className="form-row align-items-center">
                 <div className="col-auto">
