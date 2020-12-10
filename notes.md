@@ -35,3 +35,12 @@ of dinosaur container and dinocard (eliminating dinosaurlist) to try and fix tha
 --collateral damage:- Add dinosaur / hide Form button no longer works; edit and delete buttons no longer work.
 -Card CSS largely fixed but they still need to be side by side
 -All other Dec 4 todos remain but I think this is still progress.  
+
+Dec 6 Notes and Next Steps:
+-fixed redux store issue, fixed add dinosaur not rendering instantly (form issue/wasn't collecting dinosaur id)
+-Restored edit form and add form functionality
+-Delete still broken, either get error about can't map, or it just doesn't re-render when I use filter.  
+-DO NOT re-fetch in componentdidupdate, creates loop.  react should re-render automatically on state change.  
+-Dinosaur list component now redundant and will be removed.
+-Need to fix delete button and continue working on css.  Also EDIT FORM is still making a duplicate entry once the action is fired.  more work needed on keeping state up to date.  
+-The problem is in my reducer.... 

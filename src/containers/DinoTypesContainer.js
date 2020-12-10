@@ -34,6 +34,7 @@ componentDidMount(){
 
 const mapStateToProps = (state) => {
   return {
+    // ...state,
     dinotypes: state.dinotypes,
     url: state.url
     }

@@ -24,6 +24,7 @@ class ErasContainer extends React.Component {
 //get redux store and map it to props.  sucessfully getting the eras from our state!
 const mapStateToProps = state => {
   return {
+    // ...state,
     eras: state.eras
   }
 }

@@ -50,6 +50,7 @@ return (dispatch) => {
   }
 
   const eraSelector = (url) => {
+
     if (url.includes('Triassic')){
       return 1
     } else if (url.includes('Jurassic')){
@@ -67,6 +68,6 @@ return (dispatch) => {
       }))
     }
   }
-// }
+
 
 export default fetchDinosaurs
