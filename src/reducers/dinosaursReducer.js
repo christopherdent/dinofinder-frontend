@@ -15,19 +15,25 @@ export default function dinosaursResducer(state = { dinosaurs: [] }, action){
            }
 
     case 'DELETE_DINOSAUR':
-     
-      return {
-        ...state, dinosaurs: [...state.dinosaurs.filter(dinosaur => dinosaur.id === action.dinosaurId ? false : true)]
+           return {
+        ...state, dinosaurs: [...state.dinosaurs.filter(dinosaur => dinosaur.id === action.dinosaurId ? false : true)]   ///returning a copy of the state as well as an array of all dinos other than the one that was just deleted.
       }
-
-// this line almost works, just missing dinosaur:        // return   state.dinosaurs.filter(dinosaur => dinosaur.id === action.id ? false : true)
 
 
     case 'EDIT_DINOSAUR':
-      // return state.dinosaurs.map(dinosaur => dinosaur.id === action.id ? action.payload : dinosaur)
-      return {...state, dinosaurs: [...state.dinosaurs, action.payload]}
+     
+    let dinos = state.dinosaurs.map(dinosaur => {
+    if (dinosaur.id === action.payload.id) {
+      return action.payload
+    } else {
+      return dinosaur
+    }
+  })
+  return {...state, dinosaurs: dinos}
 
-    default:
+ //include in array if dinosaurid matches payloadid, action.payload, if not, return dinosaur
+
+      default:
        return state
     }
 
