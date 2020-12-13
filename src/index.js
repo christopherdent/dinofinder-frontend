@@ -8,6 +8,9 @@ import erasReducer from './reducers/erasReducer'
 import dinoTypesReducer from './reducers/dinoTypesReducer'
 import { combineReducers } from "redux";
 import App from './App';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+
 
 const rootReducer = combineReducers({
   eras: erasReducer, //this causes the unwanted nesting.
@@ -20,11 +23,10 @@ const composeEnhancers =  window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 let store = createStore(rootReducer, composeEnhancers(applyMiddleware(thunk)))
 
 ReactDOM.render(
-  <React.StrictMode>
+  
     <Provider store = { store }>
       <App />
-    </Provider>
-  </React.StrictMode>,
+    </Provider>,
   document.getElementById('root')
 );
 

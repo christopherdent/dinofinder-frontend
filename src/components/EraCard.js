@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Card, CardGroup, Container, CardColumns } from 'react-bootstrap';
+
 
 const EraCard = (props) => {
 
@@ -7,18 +9,26 @@ const EraCard = (props) => {
 
 
     props.eras.map(era =>
-      <div key={era.id} className='card'>
 
+      <Card
+        variant = 'top'
+        key={era.id}
+        style={{ width: '100' }}
+        className="mb-2"
+        >
       <Link to={`./${era.name}/dino_types`}>
-        <img src={era.picture_url} alt='prehistoric world' className='card-img-top' />
-        <h4 className = 'text-center'>{era.name}</h4>
-      </Link>
+        <Card.Img src={era.picture_url} alt='prehistoric world' />
 
-      </div>
+          <Card.Title>
+        <h4 className = 'text-center'>{era.name}</h4>
+        </Card.Title>
+        </Link>
+      </Card>
+
     )
 
-
   )
+
 }
 
 export default EraCard

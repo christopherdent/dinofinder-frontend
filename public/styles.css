@@ -4,7 +4,7 @@
   height: auto;
   position: relative;
   border: 3px solid green;
-  padding: 5%
+  padding: 1%
 }
 
 .center {
@@ -18,7 +18,7 @@
 }
 .card
 {
-  min-height: 300px;
+
   max-width: 300px;
   width: 300px;
   flex: 1;

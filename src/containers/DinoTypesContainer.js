@@ -23,9 +23,13 @@ componentDidMount(){
 
   render(){
     return (
+      <React.Fragment>
+
+
       <div className="container">
         <div><DinoTypesList dinotypes={this.props.dinotypes.dinotypes}/></div>
       </div>
+      </React.Fragment>
     )
   }
 
@@ -34,7 +38,6 @@ componentDidMount(){
 
 const mapStateToProps = (state) => {
   return {
-    // ...state,
     dinotypes: state.dinotypes,
     url: state.url
     }

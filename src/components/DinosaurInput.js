@@ -24,9 +24,7 @@ handleOnChange = (event) => {
 
 handleOnSubmit = (event) => {   ///maybe add the fechdinosaurs call to this?
   event.preventDefault()
- console.log('1')
   this.props.addDinosaur(this.state, this.props.url)
-  console.log('2')
   this.setState(
     { name: '',
       size: '',
@@ -55,7 +53,7 @@ handleOnSubmit = (event) => {   ///maybe add the fechdinosaurs call to this?
             <select className="form-control"
               name="dino_type_id"
               id="dino_type_id"
-              value={this.state.dino_type_id ? this.state.dino_type_id : ''}
+              value={this.props.dinoType ? this.props.dinoType : ''}
               onChange={this.handleOnChange}
               required>
               <option value=''></option>
@@ -63,14 +61,14 @@ handleOnSubmit = (event) => {   ///maybe add the fechdinosaurs call to this?
               <option value="2">Triassic Carnivore</option>
               <option value="3">Triassic Avian</option>
               <option value="4">Triassic Marine</option>
-                <option value="5">Jurassic Herbivore</option>
-                <option value="6">Jurassic Carnivore</option>
-                <option value="7">Jurassic Avian</option>
-                <option value="8">Jurassic Marine</option>
-                  <option value="9">Cretaceous Herbivore</option>
-                  <option value="10">Cretaceous Carnivore</option>
-                  <option value="11">Cretaceous Avian</option>
-                  <option value="12">Cretaceous Marine</option>
+              <option value="5">Jurassic Herbivore</option>
+              <option value="6">Jurassic Carnivore</option>
+              <option value="7">Jurassic Avian</option>
+              <option value="8">Jurassic Marine</option>
+              <option value="9">Cretaceous Herbivore</option>
+              <option value="10">Cretaceous Carnivore</option>
+              <option value="11">Cretaceous Avian</option>
+              <option value="12">Cretaceous Marine</option>
             </select>
             <br />          <br />
 

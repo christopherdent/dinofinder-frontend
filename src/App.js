@@ -7,6 +7,8 @@ import DinosaurInput from './components/DinosaurInput'
 import DinosaurEdit from './components/DinosaurEdit'
 import {BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import { Link } from 'react-router-dom';
+import Button from 'react-bootstrap/Button'
+
 
 class App extends React.Component {
 
@@ -23,7 +25,8 @@ class App extends React.Component {
         <Link to='/'>
         <h1 className='text-center'>DinoFinder 2020</h1>
         </Link>
-        
+        <center><small>The prehistoric card collection anyone can edit!</small></center>
+
       <Switch>
           <Route exact path='/' component={ErasContainer} />
           <Route exact path='/:name/dino_types' component={DinoTypesContainer} />

@@ -1,8 +1,8 @@
 import React from 'react';
-
+// import Button from 'react-bootstrap/Button';
 
 //only used for dinosaurs here but could potentially be used on components for eras or dino_types in the future if more were to be added.
-const Button = (props) => {
+const DeleteButton = (props) => {
 
   return (
 
@@ -13,4 +13,4 @@ const Button = (props) => {
     )
   }
 
-export default Button
+export default DeleteButton

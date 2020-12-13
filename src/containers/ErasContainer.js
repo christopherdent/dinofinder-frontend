@@ -6,7 +6,6 @@ import {fetchEras} from '../actions/fetchEras'
 
 class ErasContainer extends React.Component {
 
-
   componentDidMount(){
     this.props.fetchEras()   ///accessing the function through props (instead of on its own) allows us to connect function with Redux Store
   }
@@ -14,6 +13,9 @@ class ErasContainer extends React.Component {
   render(){
     return (
       <div className="container">
+        <h2 className = 'text-center'>
+          Choose an Era to Begin <br /><br /><br />
+        </h2>
         <div><ErasList eras={this.props.eras.eras}/></div>
       </div>
     )
@@ -21,15 +23,12 @@ class ErasContainer extends React.Component {
 
 }
 
+
 //get redux store and map it to props.  sucessfully getting the eras from our state!
 const mapStateToProps = state => {
   return {
-    // ...state,
     eras: state.eras
   }
 }
-
-// const mapDispatchToProps = () => {
-// }
 
 export default connect(mapStateToProps, {fetchEras})(ErasContainer)

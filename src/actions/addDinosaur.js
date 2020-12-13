@@ -1,51 +1,8 @@
 import {fetchDinosaurs} from '../actions/fetchDinosaurs'
+import { dinoTypeSelector } from '../actions/dinoSelector'
 
 export const addDinosaur = (data, url) => {
-  const dinoTypeSelector = (url) => {
-    let dino;
-  switch (url) {
-    case 'Triassic Herbivore':
-    dino = '1'
-      break;
-    case 'Triassic Carnivore':
-      dino = '2'
-      break;
-     case 'Triassic Avian':
-      dino = '3'
-      break;
-    case 'Triassic Marine':
-      dino = '4'
-      break;
-    case 'Jurassic Herbivore':
-      dino = '5'
-      break;
-    case 'Jurassic Carnivore':
-      dino = '6'
-      break;
-      case 'Jurassic Avian':
-        dino = '7'
-        break;
-      case 'Jurassic Marine':
-        dino = '8'
-        break;
-      case 'Cretaceous Herbivore':
-        dino = '9'
-        break;
-      case 'Cretaceous Carnivore':
-        dino = '10'
-        break;
-      case 'Cretaceous Avian':
-        dino = '11'
-        break;
-      case 'Cretaceous Marine':
-        dino = '12'
-        break;
-    default:
-    console.log('it did not match anything')
-      break;
-    }
-    return dino
-  }
+  dinoTypeSelector(url)
 
   const eraSelector = (url) => {
     if (url.includes('Triassic')){
@@ -56,7 +13,7 @@ export const addDinosaur = (data, url) => {
       return 3
     }
   }
-
+//since its loading from scratch I use dinoSelector and eraSelector to complete the correct fetch URL, in lieu of a dinosaur object like in the others.
   return (dispatch) => {
     return fetch(`http://localhost:3000/api/v1/eras/${eraSelector(url)}/dino_types/${dinoTypeSelector(url)}/dinosaurs`, {
       headers: {
