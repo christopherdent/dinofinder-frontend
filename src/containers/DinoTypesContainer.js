@@ -26,9 +26,11 @@ componentDidMount(){
       <React.Fragment>
 
 
-      <div className="container">
+      <div className="container" id="centered">
+
         <div><DinoTypesList dinotypes={this.props.dinotypes.dinotypes}/></div>
-      </div>
+
+    </div>
       </React.Fragment>
     )
   }

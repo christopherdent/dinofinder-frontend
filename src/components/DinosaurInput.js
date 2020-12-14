@@ -22,7 +22,7 @@ handleOnChange = (event) => {
   })
 }
 
-handleOnSubmit = (event) => {   ///maybe add the fechdinosaurs call to this?
+handleOnSubmit = (event) => {
   event.preventDefault()
   this.props.addDinosaur(this.state, this.props.url)
   this.setState(
@@ -43,7 +43,7 @@ handleOnSubmit = (event) => {   ///maybe add the fechdinosaurs call to this?
     return (
       <div>
         <h5>Add a Dinosaur</h5>
-        <small>HINT: You can find most of the info below from <a href="https://en.wikipedia.org/wiki/Dinosaur">Wikipedia.</a>  At a minimum, please include the category, name and picture URL. </small>
+        <small>HINT: You can find most of the info below from <a href="https://en.wikipedia.org/wiki/Portal:Mesozoic">Wikipedia.</a>  At a minimum, please include the category, name and picture URL. </small>
         <br /> <br />
         <form onSubmit={this.handleOnSubmit}>
           <small>

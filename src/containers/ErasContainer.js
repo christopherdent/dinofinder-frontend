@@ -2,7 +2,7 @@ import React from 'react'
 import {connect} from 'react-redux'
 import ErasList from '../components/ErasList'
 import {fetchEras} from '../actions/fetchEras'
-import Jumbotron from 'react-bootstrap/Jumbotron'
+ 
 
 class ErasContainer extends React.Component {
 
@@ -14,12 +14,12 @@ class ErasContainer extends React.Component {
     return (
 
       <div className="container">
-<Jumbotron>
+
         <h2 className = 'text-center'>
           Choose an Era to Begin <br /><br /><br />
         </h2>
         <div><ErasList eras={this.props.eras.eras}/></div>
-</Jumbotron>
+
     </div>
     )
   }
