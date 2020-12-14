@@ -1,7 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {editDinosaur} from '../actions/editDinosaur'
-
+import {Accordion, Button } from 'react-bootstrap'
 
 class DinosaurEdit extends React.Component {
   constructor(props) {
@@ -16,7 +16,8 @@ class DinosaurEdit extends React.Component {
       picture_url: '',
       summary: '',
       dino_type_id: '',
-      era_id: ''
+      era_id: '',
+      done: ''
       }
     }
 
@@ -31,7 +32,8 @@ componentDidMount() {
     picture_url: this.props.dinoPic,
     summary: this.props.dinoSummary,
     dino_type_id: this.props.dinoTypeId,
-    era_id: this.props.era
+    era_id: this.props.era,
+    done: null
   })
 }
 
@@ -45,6 +47,7 @@ handleOnSubmit = (event) => {
   event.preventDefault()
   let dinosaur = {...this.state, id: this.state.id}
   this.props.editDinosaur(dinosaur)
+  this.setState({...this.state, done: true})
 }
 
   render() {
@@ -54,7 +57,8 @@ handleOnSubmit = (event) => {
         <h5>Edit a Dinosaur</h5>
         <small>HINT: You can find most of the info below from <a href="https://en.wikipedia.org/wiki/Dinosaur">Wikipedia.</a>  At a minimum, please include the category, name and picture URL. </small>
         <br /> <br />
-        <form onSubmit={this.handleOnSubmit}>
+{!this.state.done && (
+      <form onSubmit={this.handleOnSubmit}>
           <small>
 
           <label>Category: When did it live and what kind of dinosaur was it? </label><br />
@@ -120,16 +124,20 @@ handleOnSubmit = (event) => {
 
             <div className="col-auto">
                   <label id='description'>Fun Fact or Brief Description</label><br />
-                  <textarea name='summary' id='description' rows="5" cols="80" placeholder='Description' value={this.state.summary} onChange={this.handleOnChange} /><br />
+                  <textarea name='summary' id='description' maxLength="500" rows="12" cols="30" placeholder='Description' value={this.state.summary} onChange={this.handleOnChange} /><br />
             </div>
 
                   </div>
 
 
             </small>
-              <input type='submit' value='Edit Dinosaur!'/>
+
+              <input type='submit' value='Commit Changes'  />
 
         </form>
+
+      )}
+
       </div>
     )
   }

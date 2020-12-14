@@ -12,13 +12,7 @@ import Button from 'react-bootstrap/Button'
 
 class App extends React.Component {
 
-
-
-
   render() {
-
-
-
     return (
       <Router>
       <div className="App">

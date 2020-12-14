@@ -90,4 +90,3 @@ function mapStateToProps(state) {
 
 
 export default connect(mapStateToProps, {fetchDinosaurs, addDinosaur, editDinosaur, deleteDinosaur})(DinosaursContainer)   //here, fetchDinosaurs is sitting in for mapDispatchToProps and doing this makes IT a prop.
-// export default connect(mapStateToProps, mapDispatchToProps)(DinosaursContainer)   //here, fetchDinosaurs is sitting in for mapDispatchToProps and doing this makes IT a prop.

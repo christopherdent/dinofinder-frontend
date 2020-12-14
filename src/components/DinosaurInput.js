@@ -12,7 +12,7 @@ state = {
   year_discovered: '',
   picture_url: '',
   summary: '',
-  dino_type_id: ''
+  dino_type_id: this.props.dinoType
 }
 
 
@@ -53,7 +53,7 @@ handleOnSubmit = (event) => {   ///maybe add the fechdinosaurs call to this?
             <select className="form-control"
               name="dino_type_id"
               id="dino_type_id"
-              value={this.props.dinoType ? this.props.dinoType : ''}
+              value={this.props.dinoType}
               onChange={this.handleOnChange}
               required>
               <option value=''></option>
@@ -109,7 +109,7 @@ handleOnSubmit = (event) => {   ///maybe add the fechdinosaurs call to this?
 
   <div className="col-auto">
           <label id='description'>Fun Fact or Brief Description</label><br />
-          <textarea name='summary' id='description' rows="5" cols="80" placeholder='Description' value={this.state.summary} onChange={this.handleOnChange} /><br />
+          <textarea name='summary' maxLength="500" id='description' rows="5" cols="80" placeholder='Description' value={this.state.summary} onChange={this.handleOnChange} /><br />
 </div>
 
           </div>

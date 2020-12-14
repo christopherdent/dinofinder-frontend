@@ -21,8 +21,9 @@ const DinosaurCard = (props) => {
                 <Accordion>
                   <Card>
                     <Card.Header>
-                      <Accordion.Toggle as={Button} eventKey="0">
-                            Edit {props.name}
+                      <Accordion.Toggle as={Button} eventKey="0" aria-expanded="false">
+                        <span className="collapsed">Edit {props.name}</span>
+                        <span className="expanded">Hide Form</span>
                         </Accordion.Toggle>
                     </Card.Header>
                   <Accordion.Collapse eventKey="0">
@@ -46,7 +47,7 @@ const DinosaurCard = (props) => {
                     <Card>
                       <Card.Body>
                         <DeleteButton dinosaur={props.dinosaur} dinosaurId={props.id} name={props.name} handleDelete = {props.handleDelete} />
-          
+
                     </Card.Body>
                     </Card>
                 </Accordion>

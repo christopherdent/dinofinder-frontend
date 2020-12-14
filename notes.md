@@ -49,3 +49,8 @@ December 8:
 -CRUD all functional, reducers corrected
 -Redux state updating as desired
 -Remaining project is CSS
+DevLog Dec 12: Project nearly done.  Last things to do:
+-More CSS work with react-bootstrap
+--Including make the era selector cards bigger, they are too small, maybe the dino tyes too
+--Add more dinosaurs
+--Rails side needs some work - textarea limit, validations

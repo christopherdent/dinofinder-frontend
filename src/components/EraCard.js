@@ -13,7 +13,7 @@ const EraCard = (props) => {
       <Card
         variant = 'top'
         key={era.id}
-        style={{ width: '100' }}
+        style={{ width: '200' }}
         className="mb-2"
         >
       <Link to={`./${era.name}/dino_types`}>
