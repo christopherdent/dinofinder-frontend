@@ -3,7 +3,10 @@ import DinosaurEdit from '../components/DinosaurEdit'
 import DeleteButton from '../components/DeleteButton'
 import {Container, Row, Col, Card, Accordion, Button } from 'react-bootstrap'
 
+
 const DinosaurCard = (props) => {
+
+
 
   return (
 
@@ -21,10 +24,9 @@ const DinosaurCard = (props) => {
                 <Accordion>
                   <Card>
                     <Card.Header>
-                      <Accordion.Toggle as={Button} eventKey="0" aria-expanded="false">
-                        <span className="collapsed">Edit {props.name}</span>
-                        <span className="expanded">Hide Form</span>
-                        </Accordion.Toggle>
+                      <Accordion.Toggle as={Button} id={props.id} eventKey="0">
+                        <span>Edit {props.name}</span>
+                      </Accordion.Toggle>
                     </Card.Header>
                   <Accordion.Collapse eventKey="0">
                     <Card.Body>
@@ -40,7 +42,9 @@ const DinosaurCard = (props) => {
                         dinoPic = {props.pictureUrl}
                         dinoSummary = {props.summary}
                         era = {props.dinosaur.dino_type.era_id}
-                        dinoTypeId = {props.dinotypeId} />
+                        dinoTypeId = {props.dinotypeId}
+
+                         />
                       </Card.Body>
                     </Accordion.Collapse>
                   </Card>
@@ -57,5 +61,5 @@ const DinosaurCard = (props) => {
         );
       }
 
-
+///so i need the commit button to change the div class to 'collapse show'
 export default DinosaurCard

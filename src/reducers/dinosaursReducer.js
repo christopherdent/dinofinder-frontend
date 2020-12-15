@@ -1,4 +1,7 @@
+import {collapseForm} from '../components/DinosaurEdit'
+
 export default function dinosaursResducer(state = { dinosaurs: [] }, action){
+
   switch (action.type) {
 
     case 'FETCH_DINOSAURS':
@@ -19,9 +22,11 @@ export default function dinosaursResducer(state = { dinosaurs: [] }, action){
       }
 
     case 'EDIT_DINOSAUR':
+    
     let dinos = state.dinosaurs.map(dinosaur => {
       if (dinosaur.id === action.payload.id) {
         return action.payload  ///return the modified dinosaur card
+
       } else {
         return dinosaur
       }

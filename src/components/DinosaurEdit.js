@@ -1,7 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {editDinosaur} from '../actions/editDinosaur'
-import {Accordion, Button } from 'react-bootstrap'
+
 
 class DinosaurEdit extends React.Component {
   constructor(props) {
@@ -17,8 +17,7 @@ class DinosaurEdit extends React.Component {
       summary: '',
       dino_type_id: '',
       era_id: '',
-      done: ''
-      }
+      };
     }
 
 componentDidMount() {
@@ -33,7 +32,7 @@ componentDidMount() {
     summary: this.props.dinoSummary,
     dino_type_id: this.props.dinoTypeId,
     era_id: this.props.era,
-    done: null
+
   })
 }
 
@@ -47,18 +46,25 @@ handleOnSubmit = (event) => {
   event.preventDefault()
   let dinosaur = {...this.state, id: this.state.id}
   this.props.editDinosaur(dinosaur)
-  this.setState({...this.state, done: true})
 }
+
+collapse = () => {
+  let toggleButton = document.getElementById(this.state.id)
+  toggleButton.click()
+
+}
+
+
 
   render() {
 
     return (
-      <div>
+    <div>
+       <form onSubmit={this.handleOnSubmit}>
         <h5>Edit a Dinosaur</h5>
         <small>HINT: You can find most of the info below from <a href="https://en.wikipedia.org/wiki/Dinosaur">Wikipedia.</a>  At a minimum, please include the category, name and picture URL. </small>
         <br /> <br />
-{!this.state.done && (
-      <form onSubmit={this.handleOnSubmit}>
+
           <small>
 
           <label>Category: When did it live and what kind of dinosaur was it? </label><br />
@@ -132,12 +138,9 @@ handleOnSubmit = (event) => {
 
             </small>
 
-              <input type='submit' value='Commit Changes'  />
+              <input type='submit' value='Commit Changes' onClick= {this.collapse} />
 
         </form>
-
-      )}
-
       </div>
     )
   }
