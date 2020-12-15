@@ -80,14 +80,14 @@ collapse = () => {
               <option value="2">Triassic Carnivore</option>
               <option value="3">Triassic Avian</option>
               <option value="4">Triassic Marine</option>
-                <option value="5">Jurassic Herbivore</option>
-                <option value="6">Jurassic Carnivore</option>
-                <option value="7">Jurassic Avian</option>
-                <option value="8">Jurassic Marine</option>
-                  <option value="9">Cretaceous Herbivore</option>
-                  <option value="10">Cretaceous Carnivore</option>
-                  <option value="11">Cretaceous Avian</option>
-                  <option value="12">Cretaceous Marine</option>
+              <option value="5">Jurassic Herbivore</option>
+              <option value="6">Jurassic Carnivore</option>
+              <option value="7">Jurassic Avian</option>
+              <option value="8">Jurassic Marine</option>
+              <option value="9">Cretaceous Herbivore</option>
+              <option value="10">Cretaceous Carnivore</option>
+              <option value="11">Cretaceous Avian</option>
+              <option value="12">Cretaceous Marine</option>
             </select>
             <br /> <br />
 

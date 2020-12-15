@@ -36,6 +36,13 @@ handleOnSubmit = (event) => {
       dino_type_id: ''
     }
   )
+  this.collapse()
+}
+
+collapse = () => {
+  let toggleButton = document.getElementById('add')
+  toggleButton.click()
+
 }
 
   render() {
@@ -116,7 +123,7 @@ handleOnSubmit = (event) => {
 
 
 </small>
-          <input type='submit' value='Add Dinosaur!'/>
+          <input type='submit' value='Add Dinosaur!' />
 
         </form>
       </div>
