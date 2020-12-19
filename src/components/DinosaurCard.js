@@ -15,9 +15,9 @@ const DinosaurCard = (props) => {
             <Card className="card card-inverse card-success card-primary mb-3 text-center">
                 <img src = {props.pictureUrl} alt = 'Artist impression of {props.name}' />
                   <Card.Header>{props.name}</Card.Header>
-                  <p>Size: {props.size} feet </p>
-                  <p>Weight: {props.weight} pounds </p>
-                  <p>Year Discovered:  {props.yearDiscovered}</p>
+                  <p>Size: {props.size} {props.size ? "feet" : "?"} </p>
+                  <p>Weight: {props.weight} {props.size ? "pounds" : "?"}  </p>
+                  <p>Year Discovered:  {props.yearDiscovered} {props.yearDiscovered ? "" : "?"} </p>
                   <p>Years Lived: {props.temporalRange}</p>
                   <Card.Text>{props.summary}</Card.Text>
 
@@ -35,13 +35,13 @@ const DinosaurCard = (props) => {
                         url={props.url}
                         dinoId = {props.id}
                         dinoName = {props.name}
-                        dinoSize = {props.size}
-                        dinoWeight = {props.weight}
-                        dinoRange = {props.temporalRange}
-                        dinoYear = {props.yearDiscovered}
+                        dinoSize = {props.size !== null ? props.size : ''}
+                        dinoWeight = {props.weight !== null ? props.weight : ''}
+                        dinoRange = {props.temporalRange !== null ? props.temporalRange : ''}
+                        dinoYear = {props.yearDiscovered !== null ? props.yearDiscovered : ''}
                         dinoPic = {props.pictureUrl}
-                        dinoSummary = {props.summary}
-                        era = {props.dinosaur.dino_type.era_id}
+                        dinoSummary = {props.summary !== null ? props.summary : ''}  /* the terinary operators in here just check to see if the prop exists so it does not pass null down to the edit form, because that makes the form uncontrolled. */
+                        era = {props.dinosaur.dino_type.era_id}  
                         dinoTypeId = {props.dinotypeId}
 
                          />
