@@ -41,7 +41,7 @@ const DinosaurCard = (props) => {
                         dinoYear = {props.yearDiscovered !== null ? props.yearDiscovered : ''}
                         dinoPic = {props.pictureUrl}
                         dinoSummary = {props.summary !== null ? props.summary : ''}  /* the terinary operators in here just check to see if the prop exists so it does not pass null down to the edit form, because that makes the form uncontrolled. */
-                        era = {props.dinosaur.dino_type.era_id}  
+                        era = { props.dinosaur.dino_type.era_id }  
                         dinoTypeId = {props.dinotypeId}
 
                          />

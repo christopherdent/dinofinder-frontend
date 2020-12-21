@@ -9,7 +9,6 @@ const EraCard = (props) => {
 
 
     props.eras.map(era =>
-
       <Card
         variant = 'top'
         key={era.id}

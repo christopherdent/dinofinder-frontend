@@ -50,7 +50,7 @@ collapse = () => {
     return (
       <div>
         <h5>Add a Dinosaur</h5>
-        <small>HINT: You can find most of the info below from <a href="https://en.wikipedia.org/wiki/Portal:Mesozoic">Wikipedia.</a>  At a minimum, please include the category, name and picture URL. </small>
+        <small>HINT: You can find most of the info below from the <a href="https://en.wikipedia.org/wiki/Portal:Mesozoic" target="_blank">Wikipedia Mesozoic Portal.</a>  At a minimum, please include the category, name and picture URL. </small>
         <br /> <br />
         <form onSubmit={this.handleOnSubmit}>
           <small>
@@ -92,7 +92,7 @@ collapse = () => {
         </div>
         <div className="col-auto">
           <label>Dinosaur Weight</label><br />
-          <small><a href = 'https://www.google.com/search?q=convert+tons+to+pounds&oq=convert+tons+to+pounds'>Convert from tons</a></small><br />
+          <small><a href = 'https://www.google.com/search?q=convert+tons+to+pounds&oq=convert+tons+to+pounds' target="_blank">Convert from tons</a></small><br />
           <input type='number' name='weight' placeholder='Dinosaur Weight' value={this.state.weight} onChange={this.handleOnChange} />
         </div>
 

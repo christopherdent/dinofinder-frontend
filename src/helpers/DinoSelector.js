@@ -43,3 +43,13 @@ switch (url) {
   }
   return dino
 }
+
+export const eraSelector = (url) => {
+  if (url.includes('Triassic')){
+    return 1
+  } else if (url.includes('Jurassic')){
+    return 2
+  } else if (url.includes('Cretaceous')){
+    return 3
+  }
+}

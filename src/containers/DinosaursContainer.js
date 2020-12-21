@@ -1,13 +1,15 @@
 import React from 'react'
+import DinosaurCard from '../components/DinosaurCard'
+import DinosaurInput from '../components/DinosaurInput'
+import DinosaursList from '../components/DinosaursList'
 import {connect} from 'react-redux'
 import {fetchDinosaurs} from '../actions/fetchDinosaurs'
 import { addDinosaur } from '../actions/addDinosaur'
 import { editDinosaur } from '../actions/editDinosaur'
-import {deleteDinosaur } from '../actions/deleteDinosaur'
-import { dinoTypeSelector } from '../actions/dinoSelector'
-import DinosaurInput from '../components/DinosaurInput'
-import DinosaurCard from '../components/DinosaurCard'
-import {Container, Row, Col, Card, Button, Accordion } from 'react-bootstrap'
+import { deleteDinosaur } from '../actions/deleteDinosaur'
+import { dinoTypeSelector } from '../helpers/DinoSelector.js'
+
+import {Container, Row, Button } from 'react-bootstrap'
 
 class DinosaursContainer extends React.Component {
 
@@ -60,8 +62,6 @@ listDinos = () => {
           }
 
   render(){
-
-    const { dinosaurs } = this.props;
     const { showHide } = this.state;
 
     return (
@@ -70,10 +70,9 @@ listDinos = () => {
           <Button id="add" variant="success" onClick={() => this.hideComponent("showHide")}>{showHide === false ? "Add Dinosaur to Collection" : "Hide Form"}</Button>
         </div>
         <div> {showHide && <DinosaurInput url={this.state.url} dinoType={dinoTypeSelector(this.state.url)}/>}<hr /></div>
+        
+        <DinosaursList listDinos= {this.listDinos()}/>
 
-          <Row>
-            {this.listDinos()}
-          </Row>
 
       </Container>
 

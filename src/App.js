@@ -7,7 +7,6 @@ import DinosaurInput from './components/DinosaurInput'
 import DinosaurEdit from './components/DinosaurEdit'
 import {BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import { Link } from 'react-router-dom';
-import Button from 'react-bootstrap/Button'
 import Jumbotron from 'react-bootstrap/Jumbotron'
 
 class App extends React.Component {
@@ -19,6 +18,7 @@ class App extends React.Component {
         <Jumbotron>
         <Link to='/'>
         <h1 className='text-center'>DinoFinder 2020</h1>
+
         </Link>
       <br />
         <center><h5>The prehistoric card collection anyone can edit!</h5></center>
@@ -47,8 +47,6 @@ class App extends React.Component {
 // }
 
 //gives us ability to dispatch new actions to our store directly from this component
-const mapDispatchToProps = () => {
 
-}
 
 export default connect(null)(App);
