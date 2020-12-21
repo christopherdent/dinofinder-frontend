@@ -7,33 +7,33 @@ class DinosaurEdit extends React.Component {
   constructor(props) {
     super(props);
     this.state =  {
-      id: '',
-      name: '',
-      size: '',
-      weight: '',
-      temporal_range: '',
-      year_discovered: '',
-      picture_url: '',
-      summary: '',
-      dino_type_id: '',
-      era_id: '',
+      id: this.props.dinoId,
+      name: this.props.dinoName,
+      size: this.props.dinoSize,
+      weight: this.props.dinoWeight,
+      temporal_range: this.props.dinoRange,
+      year_discovered: this.props.dinoYear,
+      picture_url: this.props.dinoPic,
+      summary: this.props.dinoSummary,
+      dino_type_id: this.props.dinoTypeId,
+      era_id: this.props.era,
       };
     }
 
 componentDidMount() {
-  this.setState({
-    id: this.props.dinoId,
-    name: this.props.dinoName,
-    size: this.props.dinoSize,
-    weight: this.props.dinoWeight,
-    temporal_range: this.props.dinoRange,
-    year_discovered: this.props.dinoYear,
-    picture_url: this.props.dinoPic,
-    summary: this.props.dinoSummary,
-    dino_type_id: this.props.dinoTypeId,
-    era_id: this.props.era,
-
-  })
+  // this.setState({
+  //   id: this.props.dinoId,
+  //   name: this.props.dinoName,
+  //   size: this.props.dinoSize,
+  //   weight: this.props.dinoWeight,
+  //   temporal_range: this.props.dinoRange,
+  //   year_discovered: this.props.dinoYear,
+  //   picture_url: this.props.dinoPic,
+  //   summary: this.props.dinoSummary,
+  //   dino_type_id: this.props.dinoTypeId,
+  //   era_id: this.props.era,
+  //
+  // })
 }
 
 handleOnChange = (event) => {

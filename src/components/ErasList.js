@@ -8,14 +8,13 @@ const ErasList = (props) => {
 
   return (
 <div>
-
-
-<CardColumns>
+  <CardColumns>
     <div>
-        <EraCard eras={props.eras} />
+      {props.listEras}
     </div>
-</CardColumns>
+  </CardColumns>
 </div>
+
   )
 
 }

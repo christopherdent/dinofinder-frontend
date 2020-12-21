@@ -16,7 +16,7 @@ const DinosaurCard = (props) => {
                 <img src = {props.pictureUrl} alt = 'Artist impression of {props.name}' />
                   <Card.Header>{props.name}</Card.Header>
                   <p>Size: {props.size} {props.size ? "feet" : "?"} </p>
-                  <p>Weight: {props.weight} {props.size ? "pounds" : "?"}  </p>
+                  <p>Weight: {props.weight} {props.weight ? "pounds" : "?"}  </p>
                   <p>Year Discovered:  {props.yearDiscovered} {props.yearDiscovered ? "" : "?"} </p>
                   <p>Years Lived: {props.temporalRange}</p>
                   <Card.Text>{props.summary}</Card.Text>
@@ -41,7 +41,7 @@ const DinosaurCard = (props) => {
                         dinoYear = {props.yearDiscovered !== null ? props.yearDiscovered : ''}
                         dinoPic = {props.pictureUrl}
                         dinoSummary = {props.summary !== null ? props.summary : ''}  /* the terinary operators in here just check to see if the prop exists so it does not pass null down to the edit form, because that makes the form uncontrolled. */
-                        era = { props.dinosaur.dino_type.era_id }  
+                        era = { props.dinosaur.dino_type.era_id }
                         dinoTypeId = {props.dinotypeId}
 
                          />
@@ -60,6 +60,9 @@ const DinosaurCard = (props) => {
           </React.Fragment>
         );
       }
+DinosaurCard.defaultProps = {
+  dinoPic: 'https://ecdn.teacherspayteachers.com/thumbitem/Dinosaur-with-hand-sanitizer-and-face-mask-5487390-1587563440/original-5487390-1.jpg'
 
+}
 ///so i need the commit button to change the div class to 'collapse show'
 export default DinosaurCard

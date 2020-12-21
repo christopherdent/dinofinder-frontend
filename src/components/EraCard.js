@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Card, CardGroup, Container, CardColumns } from 'react-bootstrap';
+import { Card, CardGroup, Container, CardColumns, Carousel } from 'react-bootstrap';
 
 
 const EraCard = (props) => {
@@ -8,23 +8,20 @@ const EraCard = (props) => {
   return (
 
 
-    props.eras.map(era =>
       <Card
         variant = 'top'
-        key={era.id}
+        key={props.id}
         style={{ width: '200' }}
         className="mb-2"
         >
-      <Link to={`./${era.name}/dino_types`}>
-        <Card.Img src={era.picture_url} alt='prehistoric world' />
+      <Link to={`./${props.name}/dino_types`}>
+        <Card.Img src={props.pictureUrl} alt='prehistoric world' />
 
           <Card.Title>
-        <h4 className = 'text-center'>{era.name}</h4>
+        <h4 className = 'text-center'>{props.name}</h4>
         </Card.Title>
         </Link>
       </Card>
-
-    )
 
   )
 
