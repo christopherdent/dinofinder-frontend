@@ -1,7 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {addDinosaur} from '../actions/addDinosaur'
-import { Form, Row, Col } from 'react-bootstrap';
+import { Form, Row, Col, Button } from 'react-bootstrap';
 
 class DinosaurInput extends React.Component {
 state = {
@@ -128,7 +128,7 @@ collapse = () => {
           <Form.Control as='textarea' name='summary' maxLength="500" id='description' rows="5" cols="80" placeholder='Description' value={this.state.summary} onChange={this.handleOnChange} />
   </Form.Group>
           </Form.Row>
-          <Form.Control type='submit' value='Add Dinosaur!' />
+          <Button type='submit' variant="primary" size='lg' block>Add Dinosaur!</Button>
 
   </Form>
 

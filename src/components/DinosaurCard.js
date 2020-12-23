@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import DinosaurEdit from '../components/DinosaurEdit'
 import DeleteButton from '../components/DeleteButton'
+import LikeButton from '../components/LikeButton'
 import {Container, Row, Col, Card, Accordion, Button } from 'react-bootstrap'
 
 
@@ -20,7 +21,7 @@ const DinosaurCard = (props) => {
                   <p>Year Discovered:  {props.yearDiscovered} {props.yearDiscovered ? "" : "?"} </p>
                   <p>Years Lived: {props.temporalRange}</p>
                   <Card.Text>{props.summary}</Card.Text>
-
+                  <br /><LikeButton /><br />
                 <Accordion>
                   <Card>
                     <Card.Header>

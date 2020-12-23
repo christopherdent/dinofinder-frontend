@@ -7,9 +7,11 @@ const DinosaursList = (props) => {
 // <div className="d-flex mt-5 justify-content-center">
   return (
     <div>
+      <center>
       <Row>
         {props.listDinos}
       </Row>
+      </center>
     </div>
   )
 }

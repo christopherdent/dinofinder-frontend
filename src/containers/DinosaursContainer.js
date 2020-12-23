@@ -70,7 +70,7 @@ listDinos = () => {
           <Button id="add" variant="success" onClick={() => this.hideComponent("showHide")}>{showHide === false ? "Add Dinosaur to Collection" : "Hide Form"}</Button>
         </div>
         <div> {showHide && <DinosaurInput url={this.state.url} dinoType={dinoTypeSelector(this.state.url)}/>}<hr /></div>
-        
+
         <DinosaursList listDinos= {this.listDinos()}/>
 
 

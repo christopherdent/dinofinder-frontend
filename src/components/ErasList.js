@@ -8,11 +8,13 @@ const ErasList = (props) => {
 
   return (
 <div>
-  <CardColumns>
-    <div>
-      {props.listEras}
-    </div>
-  </CardColumns>
+  <center>
+    <CardColumns>
+      <div>
+        {props.listEras}
+      </div>
+    </CardColumns>
+    </center>
 </div>
 
   )
