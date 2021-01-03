@@ -60,7 +60,7 @@ return (dispatch) => {
     }
   }
 
-  return fetch(`http://localhost:3000/api/v1/eras/${eraSelector(url)}/dino_types/${dinoTypeSelector(url)}/dinosaurs`)  ///fetching to different urls based on the params from the first page.
+  return fetch(`https://murmuring-mesa-24613.herokuapp.com/api/v1/eras/${eraSelector(url)}/dino_types/${dinoTypeSelector(url)}/dinosaurs`)  ///fetching to different urls based on the params from the first page.
   .then(resp => resp.json())
   .then(dinosaurs => dispatch({
       type: 'FETCH_DINOSAURS',

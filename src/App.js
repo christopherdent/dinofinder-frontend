@@ -7,7 +7,9 @@ import DinosaurInput from './components/DinosaurInput'
 import DinosaurEdit from './components/DinosaurEdit'
 import {BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import { Link } from 'react-router-dom';
-import Jumbotron from 'react-bootstrap/Jumbotron'
+
+import { Jumbotron, Breadcrumb } from 'react-bootstrap'
+
 
 class App extends React.Component {
 
@@ -22,7 +24,8 @@ class App extends React.Component {
         </Link>
       <br />
         <center><h5>The prehistoric card collection anyone can edit!</h5></center>
-        </Jumbotron>
+          </Jumbotron>
+
       <Switch>
           <Route exact path='/' component={ErasContainer} />
           <Route exact path='/:name/dino_types' component={DinoTypesContainer} />

@@ -8,7 +8,7 @@ export const addDinosaur = (data, url) => {
 
 //since its loading from scratch I use dinoSelector and eraSelector helpers to complete the correct fetch URL, in lieu of a dinosaur object like in the others.
   return (dispatch) => {
-    return fetch(`http://localhost:3000/api/v1/eras/${eraSelector(url)}/dino_types/${dinoTypeSelector(url)}/dinosaurs`, {
+    return fetch(`https://murmuring-mesa-24613.herokuapp.com/api/v1/eras/${eraSelector(url)}/dino_types/${dinoTypeSelector(url)}/dinosaurs`, {
       headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json'

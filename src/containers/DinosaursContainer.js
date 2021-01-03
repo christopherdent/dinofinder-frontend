@@ -9,7 +9,7 @@ import { editDinosaur } from '../actions/editDinosaur'
 import { deleteDinosaur } from '../actions/deleteDinosaur'
 import { dinoTypeSelector } from '../helpers/DinoSelector.js'
 
-import {Container, Row, Button } from 'react-bootstrap'
+import {Container, Row, Button, Breadcrumb } from 'react-bootstrap'
 
 class DinosaursContainer extends React.Component {
 
@@ -65,6 +65,9 @@ listDinos = () => {
     const { showHide } = this.state;
 
     return (
+      <React.Fragment>
+
+
       <Container>
         <div className="text-center">
           <Button id="add" variant="success" onClick={() => this.hideComponent("showHide")}>{showHide === false ? "Add Dinosaur to Collection" : "Hide Form"}</Button>
@@ -75,7 +78,7 @@ listDinos = () => {
 
 
       </Container>
-
+</React.Fragment>
       )
     }
   }
