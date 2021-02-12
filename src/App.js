@@ -12,8 +12,9 @@ import { Jumbotron } from 'react-bootstrap'
 
 class App extends React.Component {
 
-
-
+componentDidMount(){
+  document.getElementById('main-heading').click();
+}
 
 
   render() {
@@ -22,7 +23,7 @@ class App extends React.Component {
       <div className="App">
         <Jumbotron>
         <Link to='/'>
-        <h1 className='text-center'>DinoFinder 2020</h1>
+        <h1 className='text-center' id="main-heading">DinoFinder 2020</h1>
 
         </Link>
       <br />
