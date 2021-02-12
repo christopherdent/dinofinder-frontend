@@ -7,11 +7,14 @@ import DinosaurInput from './components/DinosaurInput'
 import DinosaurEdit from './components/DinosaurEdit'
 import {BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import { Link } from 'react-router-dom';
-
-import { Jumbotron, Breadcrumb } from 'react-bootstrap'
+import { Jumbotron } from 'react-bootstrap'
 
 
 class App extends React.Component {
+
+
+
+
 
   render() {
     return (

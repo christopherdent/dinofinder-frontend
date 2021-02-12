@@ -11,7 +11,7 @@ class ErasContainer extends React.Component {
   }
 
   listEras = () => {
-    if (this.props.eras.eras) {
+    // if (this.props.eras.eras) {
       return (
         this.props.eras.eras.map((era, index) =>
         <EraCard
@@ -21,7 +21,7 @@ class ErasContainer extends React.Component {
           pictureUrl={era.picture_url} />
         )
       )
-    }
+    // }
   }
 
   render(){
