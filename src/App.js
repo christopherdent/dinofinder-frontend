@@ -36,8 +36,9 @@ componentDidMount(){
       <br />
         <center><h5>The prehistoric card collection anyone can edit!</h5></center>
           </Jumbotron>
-<center>Welcome User</center>
+<center>Welcome User<br/>
 <Login/>
+</center>
       <Switch>
           <Route exact path='/' component={ErasContainer} />
           <Route exact path='/:name/dino_types' component={DinoTypesContainer} />
