@@ -1,9 +1,9 @@
 //action creator creates an action object which goes to the reducer, which then returns new state
 //thunk will allow us to wrap the fatch in a function
-
+  // return fetch('https://murmuring-mesa-24613.herokuapp.com/api/v1/eras')
 export function fetchEras() {
 return (dispatch) => {
-  return fetch('https://murmuring-mesa-24613.herokuapp.com/api/v1/eras')
+  return fetch('http://localhost:3000/api/v1/eras')
   .then(resp => resp.json())
   .then(eras => dispatch({
       type: 'FETCH_ERAS',

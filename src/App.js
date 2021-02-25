@@ -15,6 +15,10 @@ class App extends React.Component {
     super()
     this.state = {
       currentUser: null,
+      loginForm: {
+        email: "",
+        password: ""
+      }
 
     }
   }
@@ -22,6 +26,22 @@ class App extends React.Component {
 componentDidMount(){
   document.getElementById('main-heading').click();
 }
+
+
+handleLoginFormChange = event => {
+  const { name, value } = event.target
+  this.setState({
+    loginForm: {
+      ...this.state.loginForm,
+      [name]: value
+    }
+  })
+}
+
+handleOnLoginFormSubmit(event) {
+
+}
+
 
 
   render() {
@@ -37,7 +57,11 @@ componentDidMount(){
         <center><h5>The prehistoric card collection anyone can edit!</h5></center>
           </Jumbotron>
 <center>Welcome User<br/>
-<Login/>
+<Login
+handleOnLoginFormSubmit={this.handleOnLoginFormSubmit}
+handleOnLoginChange={this.handleLoginFormChange}
+  />
+{this.state.loginForm.email}
 </center>
       <Switch>
           <Route exact path='/' component={ErasContainer} />
