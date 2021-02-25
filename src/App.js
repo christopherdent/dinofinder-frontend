@@ -18,8 +18,8 @@ class App extends React.Component {
       loginForm: {
         email: "",
         password: ""
-      }
-
+      },
+      secrets: []
     }
   }
 
@@ -59,7 +59,7 @@ handleOnLoginFormSubmit(event) {
 <center>Welcome User<br/>
 <Login
 handleOnLoginFormSubmit={this.handleOnLoginFormSubmit}
-handleOnLoginChange={this.handleLoginFormChange}
+handleLoginFormChange={this.handleLoginFormChange}
   />
 {this.state.loginForm.email}
 </center>
