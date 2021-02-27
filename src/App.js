@@ -38,7 +38,37 @@ handleLoginFormChange = event => {
   })
 }
 
-handleOnLoginFormSubmit(event) {
+handleLoginFormSubmit = event => {
+  event.preventDefault()
+  console.log("Submit has been clicked.")
+  // now form needs to go to backend where user is authenticated, and if valid, send user back to front end.  with that respose you will set state.
+  const userInfo = this.state.loginForm
+  const configObj = {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      user: userInfo
+    })
+  }
+  fetch("http://localhost:3000/api/v1/login", configObj)
+    .then(response => response.json())
+    .then(userJSON => {
+    if (userJSON.error) {
+
+      alert('Not allowed!')
+    } else {
+      debugger
+      this.setState({
+
+        currentUser: userJSON
+      })
+    }
+  })
+
+
+    .catch(console.log)
 
 }
 
@@ -56,14 +86,20 @@ handleOnLoginFormSubmit(event) {
       <br />
         <center><h5>The prehistoric card collection anyone can edit!</h5></center>
           </Jumbotron>
+
 <center>Welcome User<br/>
 <Login
-handleOnLoginFormSubmit={this.handleOnLoginFormSubmit}
+handleLoginFormSubmit={this.handleLoginFormSubmit}
 handleLoginFormChange={this.handleLoginFormChange}
+email={this.state.loginForm.email}
+password={this.state.loginForm.password}
   />
 {this.state.loginForm.email}
 </center>
+
+
       <Switch>
+
           <Route exact path='/' component={ErasContainer} />
           <Route exact path='/:name/dino_types' component={DinoTypesContainer} />
           <Route exact path='/:name/dinosaurs' component={DinosaursContainer} />
