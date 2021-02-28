@@ -75,32 +75,32 @@ handleLoginFormSubmit = event => {
 
 
   render() {
+    const { currentUser } = this.state
     return (
       <Router>
       <div className="App">
         <Jumbotron>
         <Link to='/'>
         <h1 className='text-center' id="main-heading">DinoFinder 2020</h1>
-
         </Link>
       <br />
         <center><h5>The prehistoric card collection anyone can edit!</h5></center>
           </Jumbotron>
-
-<center>Welcome User<br/>
-<Login
-handleLoginFormSubmit={this.handleLoginFormSubmit}
-handleLoginFormChange={this.handleLoginFormChange}
-email={this.state.loginForm.email}
-password={this.state.loginForm.password}
-  />
-{this.state.loginForm.email}
-</center>
+          <h3>{ currentUser ? <Route exact path='/' component={ErasContainer} /> : 'not logged in' }</h3>
+          <center>Welcome User<br/>
+          <Login
+          handleLoginFormSubmit={this.handleLoginFormSubmit}
+          handleLoginFormChange={this.handleLoginFormChange}
+          email={this.state.loginForm.email}
+          password={this.state.loginForm.password}
+            />
+          {this.state.loginForm.email}
+          </center>
 
 
       <Switch>
 
-          <Route exact path='/' component={ErasContainer} />
+         
           <Route exact path='/:name/dino_types' component={DinoTypesContainer} />
           <Route exact path='/:name/dinosaurs' component={DinosaursContainer} />
           <Route exact path='/dinosaurs/new' component={DinosaurInput} />
