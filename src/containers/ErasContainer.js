@@ -11,8 +11,9 @@ class ErasContainer extends React.Component {
   }
 
   listEras = () => {
-    // if (this.props.eras.eras) {
+
       return (
+
         this.props.eras.eras.map((era, index) =>
         <EraCard
           key={index}
@@ -30,6 +31,7 @@ class ErasContainer extends React.Component {
       <div className="container">
 
         <h2 className = 'text-center'>
+          <center>Welcome, {this.props.currentUser}</center><br />
           Choose an Era to Begin <br /><br /><br />
         </h2>
         <div><ErasList listEras={this.listEras()}/></div>

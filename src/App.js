@@ -6,9 +6,9 @@ import DinosaursContainer from './containers/DinosaursContainer'
 import DinosaurInput from './components/DinosaurInput'
 import DinosaurEdit from './components/DinosaurEdit'
 import {BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import { Link } from 'react-router-dom';
-import { Jumbotron } from 'react-bootstrap'
 import Login from './components/Login'
+import Secrets from './components/Secrets'
+import Heading from './components/Heading'
 
 class App extends React.Component {
   constructor(){
@@ -59,7 +59,7 @@ handleLoginFormSubmit = event => {
 
       alert('Not allowed!')
     } else {
-      debugger
+
       this.setState({
 
         currentUser: userJSON
@@ -72,40 +72,51 @@ handleLoginFormSubmit = event => {
 
 }
 
-
+getSerets = event => {
+  debugger
+  // fetch("http:///localhost:3001/api/v1/secrets")
+  // .then(r => r.json())
+  //
+  // .then(console.log)
+}
 
   render() {
     const { currentUser } = this.state
     return (
+
       <Router>
-      <div className="App">
-        <Jumbotron>
-        <Link to='/'>
-        <h1 className='text-center' id="main-heading">DinoFinder 2020</h1>
-        </Link>
-      <br />
-        <center><h5>The prehistoric card collection anyone can edit!</h5></center>
-          </Jumbotron>
-          <h3>{ currentUser ? <Route exact path='/' component={ErasContainer} /> : 'not logged in' }</h3>
-          <center>Welcome User<br/>
-          <Login
-          handleLoginFormSubmit={this.handleLoginFormSubmit}
-          handleLoginFormChange={this.handleLoginFormChange}
-          email={this.state.loginForm.email}
-          password={this.state.loginForm.password}
-            />
-          {this.state.loginForm.email}
-          </center>
+        <div className="App">
+          <Heading />
 
 
-      <Switch>
 
-         
+
+          { currentUser ? <Route exact path='/' component={ErasContainer} currentUser = {currentUser} /> : <center>Please Log Into Dinofinder</center> }
+
+          <Switch>
           <Route exact path='/:name/dino_types' component={DinoTypesContainer} />
           <Route exact path='/:name/dinosaurs' component={DinosaursContainer} />
           <Route exact path='/dinosaurs/new' component={DinosaurInput} />
           <Route exact path='/dinosaurs/:name/edit' component={DinosaurEdit} />
         </Switch>
+
+
+        <center>
+
+        <Login
+        handleLoginFormSubmit={this.handleLoginFormSubmit}
+        handleLoginFormChange={this.handleLoginFormChange}
+        email={this.state.loginForm.email}
+        password={this.state.loginForm.password}
+          />
+
+
+        <button onClick={console.log('it works')}>Show User Secrets</button>
+        <Secrets secrets={this.state.secrets} />
+        </center>
+
+
+
 
       </div>
       </Router>
