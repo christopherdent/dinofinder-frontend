@@ -25,8 +25,26 @@ class App extends React.Component {
 
 componentDidMount(){
   document.getElementById('main-heading').click();
+  const token = localStorage.getItem("token")
+  if (token) {
+    fetch("http://localhost:3000/get_current_user/", {
+      headers: {
+        "Authorization": token
+      }
+    })
+      .then(r => r.json())
+      .then(resp =>  {
+        if (resp.error) {
+          alert(resp.error)
+        } else {
+          this.setState({
+            currentUser: resp.user
+          })
+        }
+      })
+      .catch(console.log)
+  }
 }
-
 
 handleLoginFormChange = event => {
   const { name, value } = event.target
@@ -72,20 +90,35 @@ handleLoginFormSubmit = event => {
 
 }
 
-getSerets = event => {
-  debugger
-  // fetch("http:///localhost:3001/api/v1/secrets")
-  // .then(r => r.json())
-  //
-  // .then(console.log)
+getSerets = () => {
+
+  fetch("http://localhost:3000/api/v1/secrets/")
+  .then(r => r.json())
+  .then(secrets =>  {
+      if (secrets.error) {
+          alert("Not authorized for those secrets")
+      } else {
+      //success - we want to change state
+      this.setState({
+        secrets
+      })
+    }
+  })
 }
 
   render() {
     const { currentUser } = this.state
     return (
 
+
       <Router>
         <div className="App">
+
+          <div>
+            <button onClick={this.getSerets}>Show User Secrets</button>
+            <Secrets secrets={this.state.secrets} />
+          </div>
+
           <Heading />
 
 
@@ -111,8 +144,7 @@ getSerets = event => {
           />
 
 
-        <button onClick={console.log('it works')}>Show User Secrets</button>
-        <Secrets secrets={this.state.secrets} />
+
         </center>
 
 
