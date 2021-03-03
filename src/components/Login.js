@@ -1,13 +1,9 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 
 
 const Login = ({ handleLoginFormChange, handleLoginFormSubmit, email, password }) => {
-
-// function handle(event) {
-//   event.preventDefault()
-//   console.log('I got clicked')
-// }
 
 
   return (
@@ -21,17 +17,20 @@ const Login = ({ handleLoginFormChange, handleLoginFormSubmit, email, password }
           value={email}
         /><br/>
         <input
-          type="text"
+          type="password"
           name="password"
           placeholder="password"
           onChange={handleLoginFormChange}
           value={password}
-        /><br/>
+        /><br/><br/>
         <input
           type="submit"
           value="Login"
         />
       </form>
+      <br /> <br />
+      <center>No account? <Link to="/signup"> Create one for free. </Link></center>
+
     </div>
   )
 }

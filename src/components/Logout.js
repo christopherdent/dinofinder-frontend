@@ -2,7 +2,7 @@ import React from 'react'
 
 
 
-const Logout = ({ logout }) => {
+const Logout = (props) => {
 
 // function handle(event) {
 //   event.preventDefault()
@@ -12,9 +12,11 @@ const Logout = ({ logout }) => {
 
   return (
     <div className="Logout">
+    <form>
         <input
           type="submit"
           value="Logout"
+          onClick={props.handleLogout}
         />
       </form>
     </div>
