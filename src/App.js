@@ -25,7 +25,7 @@ componentDidMount(){
       <Router>
       <div className="App">
         <Jumbotron>
-          cjd!!!
+         
         <Link to='/'>
         <h1 className='text-center' id="main-heading">DinoFinder 2020</h1>
 
