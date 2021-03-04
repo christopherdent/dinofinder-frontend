@@ -1,11 +1,3 @@
-##App Description
-
-A user can see collections of cards of wildlife based on different eras and characteristics
-A user can add new dinosaurs to their collection, view the existing collection, update cards in the collection and if needed delete a card.
-
-
-"Learn research skills while creating a collection of dinosaur cards."
-
 # DinoFinder2020
 
 DinoFinder2020 is a single page application (SPA) intended to help people (mainly kids) learn internet research skills while creating a fun collection of dinosaur "cards."  It is wiki-style and anyone can edit it (although login functionality may be added at a later date).    
