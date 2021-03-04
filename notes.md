@@ -54,3 +54,11 @@ DevLog Dec 12: Project nearly done.  Last things to do:
 --Including make the era selector cards bigger, they are too small, maybe the dino tyes too
 --Add more dinosaurs
 --Rails side needs some work - textarea limit, validations
+# Important:  When you make a change, do it to master, but push --force.  You'll then need to follow the instrucitions here again:
+https://www.pluralsight.com/guides/how-to-create-react-application-and-deploy-on-github-pages
+Delete ghpages branch locally and in github
+then from master:  
+npm run build
+git checkout -b gh-pages
+$ git commit -a -m "Create gh-pages branch with static content"
+$ git push origin gh-pages
