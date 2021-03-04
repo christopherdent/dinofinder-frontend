@@ -13,10 +13,6 @@ import Login from './components/Login'
 class App extends React.Component {
   constructor(){
     super()
-    this.state = {
-      currentUser: null,
-
-    }
   }
 
 componentDidMount(){
@@ -52,6 +48,8 @@ componentDidMount(){
 
   }
 }
+
+
 //way of accessing values in our store as props!
 // const mapStateToProps = () => {
 //   return {
