@@ -21,7 +21,7 @@ const DinosaurCard = (props) => {
                   <p>Year Discovered:  {props.yearDiscovered} {props.yearDiscovered ? "" : "?"} </p>
                   <p>Years Lived: {props.temporalRange}</p>
                   <Card.Text>{props.summary}</Card.Text>
-                  <br /><LikeButton /><br />
+                  {/* <br /><LikeButton /><br /> */}
                 <Accordion>
                   <Card>
                     <Card.Header>
