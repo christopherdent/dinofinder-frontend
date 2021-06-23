@@ -3,11 +3,15 @@ import {connect} from 'react-redux'
 import ErasList from '../components/ErasList'
 import {fetchEras} from '../actions/fetchEras'
 import EraCard from '../components/EraCard'
+import { trackPromise } from 'react-promise-tracker';
 
 class ErasContainer extends React.Component {
 
+
   componentDidMount(){
+    trackPromise(
     this.props.fetchEras()   ///accessing the function through props (instead of on its own) allows us to connect function with Redux Store
+    )
   }
 
   listEras = () => {
