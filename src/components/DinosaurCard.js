@@ -1,8 +1,7 @@
-import React, {Component} from 'react';
+import React from 'react'
 import DinosaurEdit from '../components/DinosaurEdit'
 import DeleteButton from '../components/DeleteButton'
-import LikeButton from '../components/LikeButton'
-import {Container, Row, Col, Card, Accordion, Button } from 'react-bootstrap'
+import { Col, Card, Accordion, Button } from 'react-bootstrap'
 
 
 const DinosaurCard = (props) => {

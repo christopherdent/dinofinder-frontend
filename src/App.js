@@ -11,9 +11,9 @@ import { Jumbotron } from 'react-bootstrap'
 
 
 class App extends React.Component {
-  constructor(){
-    super()
-  }
+  // constructor(){
+  //   super()
+  // }
 
 componentDidMount(){
   document.getElementById('main-heading').click();

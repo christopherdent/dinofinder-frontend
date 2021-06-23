@@ -1,7 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
-import DinoTypeCard from './DinoTypeCard'
-//this will be a list of dinotypes specific to the era that was clicked.  I can still use the dinotypes container for this.
+
 
 const DinoTypesList = (props) => {
 

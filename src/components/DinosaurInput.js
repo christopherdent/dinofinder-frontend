@@ -1,7 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {addDinosaur} from '../actions/addDinosaur'
-import { Form, Row, Col, Button } from 'react-bootstrap';
+import { Form, Col, Button } from 'react-bootstrap';
 
 class DinosaurInput extends React.Component {
 state = {

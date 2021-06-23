@@ -9,7 +9,7 @@ import { editDinosaur } from '../actions/editDinosaur'
 import { deleteDinosaur } from '../actions/deleteDinosaur'
 import { dinoTypeSelector } from '../helpers/DinoSelector.js'
 
-import {Container, Row, Button, Breadcrumb } from 'react-bootstrap'
+import {Container, Button } from 'react-bootstrap'
 
 class DinosaursContainer extends React.Component {
 

@@ -1,4 +1,3 @@
-import {fetchDinosaurs} from '../actions/fetchDinosaurs'
 import { dinoTypeSelector } from '../helpers/DinoSelector.js'
 import { eraSelector } from '../helpers/DinoSelector.js'
 

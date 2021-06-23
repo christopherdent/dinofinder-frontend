@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Card, CardGroup, Container, CardColumns, Carousel } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 
 
 const EraCard = (props) => {
