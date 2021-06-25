@@ -31,7 +31,7 @@ componentDidMount(){
 
         </Link>
       <br />
-        <center><h5>The prehistoric card collection anyone can edit!</h5></center>
+        <center><h5>The prehistoric card collection anyone can edit!!</h5></center>
           </Jumbotron>
 
       <Switch>
