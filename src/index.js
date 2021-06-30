@@ -13,7 +13,7 @@ import { usePromiseTracker } from "react-promise-tracker";
 import Loader from 'react-loader-spinner';
 
 const rootReducer = combineReducers({
-  eras: erasReducer, //this causes the unwanted nesting.
+  eras: erasReducer, //this causes the nesting.
   dinotypes: dinoTypesReducer,
   dinosaurs: dinosaursReducer
 })
@@ -37,7 +37,7 @@ const LoadingIndicator = props => {
       }}
       >
         
-        <Loader type="Bars" color="#00008b" height="300" width="300" />
+        <Loader type="MutatingDots" color="#00008b" height="300" width="300" />
         </div>
 
    }
