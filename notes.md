@@ -62,3 +62,7 @@ npm run build
 git checkout -b gh-pages
 $ git commit -a -m "Create gh-pages branch with static content"
 $ git push origin gh-pages
+
+
+
+ 
