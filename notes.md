@@ -63,6 +63,7 @@ git checkout -b gh-pages
 $ git commit -a -m "Create gh-pages branch with static content"
 $ git push origin gh-pages
 
+////you may not even need the above as of 7/1.  I removed a -b master tag from package.json and now it looks like npm run deploy while on master branch is enough alone tor redeploy.  
 
-
- 
+ do not forget the reason you had Css issues.  In production by some magic it was finding the styles.css file, no matter where it was and even if it was linked to, it had the info.  So it could have added unwanted css like most 
+ people were having problems with but in my case it was depriving me of necessary custom CSS.  In development, it was NOT able to locate the styles.css file and therefore looked funny.  Issue put to rest once and for all.
