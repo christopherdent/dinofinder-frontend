@@ -8,6 +8,7 @@ import erasReducer from './reducers/erasReducer'
 import dinoTypesReducer from './reducers/dinoTypesReducer'
 import { combineReducers } from "redux";
 import App from './App';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { usePromiseTracker } from "react-promise-tracker";
 import Loader from 'react-loader-spinner';
