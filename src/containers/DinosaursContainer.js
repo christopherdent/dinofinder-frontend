@@ -82,7 +82,7 @@ listDinos = () => {
       )
     }
   }
-
+     
 function mapStateToProps(state) {
   return {
     dinosaurs: state.dinosaurs,
