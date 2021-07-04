@@ -38,7 +38,7 @@ const LoadingIndicator = props => {
       }}
       >
         
-        <Loader type="MutatingDots" color="#00008b" height="300" width="300" />
+        <Loader type="Circles" color="#00008b" height="300" width="300" />
         </div>
 
    }
