@@ -3,30 +3,24 @@ import { Modal, Button } from "react-bootstrap";
 import DeleteButton from '../components/DeleteButton'
 
 
-const DeleteConfirm = ({ showModal, hideModal, confirmModal, dinosaur, message }) => {
+const DeleteConfirm = ( props ) => {
 
 return (
 
-<Modal show={showModal} onHide={hideModal}>
+    <Modal show={props.showModal} onHide={props.handleClose}>
     <Modal.Header closeButton>
-        <Modal.Title>Confirm Deletion</Modal.Title>
+      <Modal.Title>Modal heading</Modal.Title>
     </Modal.Header>
-    
-    <Modal.Body>
-        <div className="alert alert-danger">{message}</div>
-    </Modal.Body>
-    
+    <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
     <Modal.Footer>
-      <Button variant="default" onClick={hideModal}>
-        Cancel
+      <Button variant="secondary" onClick={props.handleClose}>
+        Close
       </Button>
-      <Button variant="danger" onClick={() => confirmModal(dinosaur) }>
-        Delete
+      <Button variant="primary" onClick={props.handleClose}>
+        Save Changes
       </Button>
-
-
     </Modal.Footer>
-</Modal>
+  </Modal>
     )
  }
 
