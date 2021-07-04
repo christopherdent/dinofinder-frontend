@@ -8,8 +8,8 @@ const DeleteButton = (props) => {
 
       <div>
 
-        {/* <button className="btn btn-danger" onClick={() => props.handleDelete(props.dinosaur)}>Delete {props.name}</button> */}
-        <button className="btn btn-danger" onClick={() => props.showDeleteModal(props.dinosaur)}>Delete {props.name}</button>
+        <button className="btn btn-danger" onClick={() => props.handleDelete(props.dinosaur)}>Delete {props.dinosaur.name}</button>
+        
       </div>
     )
   }

@@ -60,7 +60,7 @@ const DinosaurCard = (props) => {
 
                       <button className="btn btn-danger" onClick={handleShow}>Delete {props.name}</button>
 
-                      <DeleteConfirm showModal={show} handleClose = {handleClose} dinosaur={props.dinosaur} dinosaurId={props.id} name={props.name} handleDelete = {props.handleDelete} />
+                      <DeleteConfirm showModal={show} handleClose = {handleClose} handleDelete = {props.handleDelete} dinosaur={props.dinosaur} dinosaurId={props.id} name={props.name} handleDelete = {props.handleDelete} />
                         
                     </Card.Body>
                     </Card>

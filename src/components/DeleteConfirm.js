@@ -9,16 +9,14 @@ return (
 
     <Modal show={props.showModal} onHide={props.handleClose}>
     <Modal.Header closeButton>
-      <Modal.Title>Modal heading</Modal.Title>
+      <Modal.Title>Are you sure?</Modal.Title>
     </Modal.Header>
-    <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+    <Modal.Body>{`${props.dinosaur.name} will become extinct.`}</Modal.Body>
     <Modal.Footer>
       <Button variant="secondary" onClick={props.handleClose}>
-        Close
+        Cancel
       </Button>
-      <Button variant="primary" onClick={props.handleClose}>
-        Save Changes
-      </Button>
+      <DeleteButton dinosaur = {props.dinosaur} handleDelete = {props.handleDelete} />
     </Modal.Footer>
   </Modal>
     )
