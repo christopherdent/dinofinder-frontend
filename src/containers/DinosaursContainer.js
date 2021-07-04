@@ -11,6 +11,10 @@ import { dinoTypeSelector } from '../helpers/DinoSelector.js'
 
 import {Container, Button } from 'react-bootstrap'
 
+
+import { DeleteConfirm } from "../components/DeleteConfirm";
+
+
 class DinosaursContainer extends React.Component {
 
   constructor(props) {
@@ -18,7 +22,11 @@ class DinosaursContainer extends React.Component {
     this.state = {
           url: this.routeParam = props.match.params.name,
           showHide: false,
-          dinosaurs: []
+          dinosaurs: [],
+          displayConfirmationModal: false, 
+          setDisplayConfirmationModal: false,
+          deleteMessage: null, 
+          setDeleteMessage: null 
       };
       this.hideComponent = this.hideComponent.bind(this);
     }
@@ -27,8 +35,32 @@ class DinosaursContainer extends React.Component {
     this.props.fetchDinosaurs(this.state.url)   ///accessing the function through props (instead of on its own) allows us to connect function with Redux Store; arg telling it which dinosaurs to fetch based on params
   }
 
+  showDeleteModal = (dinosaur) => {
+    // setType(type);
+    // setId(id);
+    // setFruitMessage(null);
+    // setVegetableMessage(null);
+     console.log("got here")
+      this.setState({ setDeleteMessage: 'Are you sure?' })
+      
+      
+      this.setState({setDisplayConfirmationModal: true });
+  };
+ 
+  
+  
+  // Hide the modal
+  
+  hideConfirmationModal = () => {
+    this.setState({setDisplayConfirmationModal: false });
+  };
+
+
+
 handleDelete = (dinosaur) => {
-    this.props.deleteDinosaur(dinosaur.id, dinosaur.dino_type.id, dinosaur.dino_type.era_id)
+    this.props.deleteDinosaur(dinosaur.id, dinosaur.dino_type.id, dinosaur.dino_type.era_id)  //my original code 
+    alert(`Dinosaur was deleted.`)
+    this.setState({setDisplayConfirmationModal: false })
   }
 
 hideComponent(name) {
@@ -54,6 +86,7 @@ listDinos = () => {
                       summary={dinosaur.summary}
                       dinotypeId={dinosaur.dino_type_id}
                       handleDelete={this.handleDelete}
+                      showDeleteModal = {this.showDeleteModal}
                       dinosaur = {dinosaur}
                       />
                 </div>)
@@ -76,6 +109,9 @@ listDinos = () => {
 
         <DinosaursList listDinos= {this.listDinos()}/>
 
+
+
+        <DeleteConfirm showModal={displayConfirmationModal} confirmModal={submitDelete} hideModal={hideConfirmationModal} type={type} id={id} message={deleteMessage}  />
 
       </Container>
 </React.Fragment>

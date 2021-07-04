@@ -8,6 +8,19 @@ const DinosaurCard = (props) => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+  
+
+
   return (
 
     <React.Fragment>
@@ -50,7 +63,7 @@ const DinosaurCard = (props) => {
                   </Card>
                     <Card>
                       <Card.Body>
-                        <DeleteButton dinosaur={props.dinosaur} dinosaurId={props.id} name={props.name} handleDelete = {props.handleDelete} />
+                        <DeleteButton dinosaur={props.dinosaur} dinosaurId={props.id} name={props.name} handleDelete = {props.handleDelete} showDeleteModal = {props.showDeleteModal} />
 
                     </Card.Body>
                     </Card>
