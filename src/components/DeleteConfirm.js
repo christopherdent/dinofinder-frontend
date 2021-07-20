@@ -5,6 +5,8 @@ import DeleteButton from '../components/DeleteButton'
 
 const DeleteConfirm = ( props ) => {
 
+
+
 return (
 
     <Modal show={props.showModal} onHide={props.handleClose}>
@@ -20,7 +22,9 @@ return (
     </Modal.Footer>
   </Modal>
     )
- }
+
+
+}
 
 export default DeleteConfirm
 
