@@ -26,7 +26,7 @@ componentDidMount(){
       <div className="App">
         <Jumbotron>
          
-        <Link to='/'>
+        <Link to='/dinofinder-frontend'>
         <h1 className='text-center' id="main-heading">DinoFinder 2020</h1>
 
         </Link>
@@ -35,7 +35,8 @@ componentDidMount(){
           </Jumbotron>
 
       <Switch>
-          <Route exact path='/' component={ErasContainer} />
+        
+          <Route exact path='/dinofinder-frontend' component={ErasContainer} />
           <Route exact path='/:name/dino_types' component={DinoTypesContainer} />
           <Route exact path='/:name/dinosaurs' component={DinosaursContainer} />
           <Route exact path='/dinosaurs/new' component={DinosaurInput} />
