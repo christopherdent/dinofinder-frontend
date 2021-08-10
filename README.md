@@ -15,7 +15,7 @@ There are Rails models for era, dinosaur type, and dinosaur.  An era `has many` 
 
 The back-end is powered by Ruby on Rails 6.0.3.2.  
 
-## How to Launch the Game in Your Local Environment
+## How to Launch in Your Local Environment
 
 The game is stored in two separate repositories, one for the back-end and one for the front-end.  
 
