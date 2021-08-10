@@ -1,3 +1,4 @@
+
 import React from 'react'
 import DinoTypeCard from '../components/DinoTypeCard'
 import {connect} from 'react-redux'
@@ -38,13 +39,17 @@ listDinoTypes = () => {
 
   render(){
     return (
-      <React.Fragment>
-        <div className="container" id="centered">
-        <div>
-          <DinoTypesList listDinoTypes={this.listDinoTypes()}/>
+  
+ 
+      <div className="container">
+        <h2 className = 'text-center'>
+          <br />
+            What types of creatures are you looking for?<br />
+            </h2>  
+        <div><DinoTypesList listDinoTypes={this.listDinoTypes()}/></div>
+        <br />
         </div>
-        </div>
-      </React.Fragment>
+ 
     )
   }
 };
@@ -57,3 +62,6 @@ const mapStateToProps = (state) => {
 };
 
 export default connect(mapStateToProps, {fetchDinoTypes} )(DinoTypesContainer)
+
+
+

@@ -10,7 +10,11 @@ const DinoTypeCard = (props) => {
         <img src = {props.pictureUrl} alt='Category of Dinosaur' className='card-img-top' />
           <span className="align-bottom"><h4 className = 'text-center'>{props.name}</h4></span>
       </Link>
-    </Card>)
+    </Card>
+  
+
+  
+    )
 
 }
 
