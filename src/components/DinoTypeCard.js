@@ -28,12 +28,12 @@ import {Card, Col } from 'react-bootstrap'
 const DinoTypeCard = (props) => {
 
   return (
-    <Col sm={2}>
+    <Col>
     <Card
-    variant = 'top'
+    
     key={props.id}
-    style={{ width: '50%' }} 
-    className="mb-2"
+    style={{ width: '75%' }} 
+    className="mb-5"
     >
         <Link to={`/${props.name}/dinosaurs`}>
         <Card.Img src = {props.pictureUrl} alt='Category of Dinosaur' className='card-img-top' />

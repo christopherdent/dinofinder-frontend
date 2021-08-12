@@ -40,15 +40,18 @@ listDinoTypes = () => {
   render(){
     return (
   
- 
+<React.Fragment> 
       <Container>
         <h2 className = 'text-center'>
           <br />
-            What types of creatures are you looking for?<br />
+            What types of creatures are you looking for?<br /><br />
             </h2>  
         <DinoTypesList listDinoTypes={this.listDinoTypes()}/>
-        <br />
+       
         </Container>
+
+<br /> <br /><br />
+</React.Fragment>
  
     )
   }

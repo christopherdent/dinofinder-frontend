@@ -18,9 +18,8 @@
   transform: translate(-50%, -50%);
 
 }
-.card
-{
 
+.card {
   max-width: 300px;
   width: 300px;
   flex: 1;
