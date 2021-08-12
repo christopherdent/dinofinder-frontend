@@ -4,6 +4,7 @@ import ErasList from '../components/ErasList'
 import {fetchEras} from '../actions/fetchEras'
 import EraCard from '../components/EraCard'
 import { trackPromise } from 'react-promise-tracker';
+import {Container } from 'react-bootstrap'
 
 class ErasContainer extends React.Component {
 
@@ -31,14 +32,17 @@ class ErasContainer extends React.Component {
   render(){
     return (
 
-      <div className="container">
+    <Container>
 
-        <h2 className = 'text-center'>
-          Choose an Era to Begin <br /><br /><br />
-        </h2>
-        <div><ErasList listEras={this.listEras()}/></div>
+      <h2 className = 'text-center'>
+        Choose an Era to Begin <br /><br /><br />
+      </h2>
+   
+        <div>
+          <ErasList listEras={this.listEras()}/>
+        </div>
 
-    </div>
+    </Container>
     )
   }
 

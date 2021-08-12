@@ -65,14 +65,14 @@ listDinos = () => {
     const { showHide } = this.state;
 
     return (
-      <React.Fragment>
+      
 
 
-      <Container>
+      <Container id="dino-container">
         <div className="text-center">
           <Button id="add" variant="success" onClick={() => this.hideComponent("showHide")}>{showHide === false ? "Add Dinosaur to Collection" : "Hide Form"}</Button>
         </div>
-        <div> {showHide && <DinosaurInput url={this.state.url} dinoType={dinoTypeSelector(this.state.url)}/>}<hr /></div>
+        <div> {showHide && <DinosaurInput url={this.state.url} dinoType={dinoTypeSelector(this.state.url)}/>}<br /></div>
 
         <DinosaursList listDinos= {this.listDinos()}/>
 
@@ -80,7 +80,7 @@ listDinos = () => {
       </Container>
 
       
-</React.Fragment>
+    
       )
     }
   }

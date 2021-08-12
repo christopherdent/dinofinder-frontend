@@ -1,18 +1,17 @@
 import React from 'react';
-import { Row } from 'react-bootstrap'
-
-///will be responsible for rendering dinosaur cards
+import { Row } from 'react-bootstrap';
+ 
 const DinosaursList = (props) => {
 
 // <div className="d-flex mt-5 justify-content-center">
   return (
-    <div>
-      <center>
-      <Row>
+    <Row xs={1} md={4} className="g-4">
+      
+      
         {props.listDinos}
-      </Row>
-      </center>
-    </div>
+       
+      
+    </Row>
   )
 }
 

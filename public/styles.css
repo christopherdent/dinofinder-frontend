@@ -60,3 +60,16 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+#dino-container{
+   
+  max-width: 150% !important;
+  margin-right: 2em;
+   
+}
+
+
+#dino-card{
+  margin: auto;
+  
+}

@@ -18,8 +18,8 @@ const DinosaurCard = (props) => {
   return (
 
     <React.Fragment>
-        <Col xs="4">
-            <Card className="card card-inverse card-success card-primary mb-3 text-center">
+        <Col>
+            <Card className="card card-inverse card-success card-primary mb-3 text-center" id="dino-card">
                 <img src = {props.pictureUrl} alt = 'Artist impression of {props.name}' />
                   <Card.Header>{props.name}</Card.Header>
                   <p>Size: {props.size} {props.size ? "feet" : "?"} </p>
