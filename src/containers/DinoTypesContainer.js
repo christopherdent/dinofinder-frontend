@@ -4,7 +4,7 @@ import DinoTypeCard from '../components/DinoTypeCard'
 import {connect} from 'react-redux'
 import DinoTypesList from '../components/DinoTypesList'
 import {fetchDinoTypes} from '../actions/fetchDinoTypes'
-
+import { Container } from 'react-bootstrap';
 
 class DinoTypesContainer extends React.Component {
 
@@ -41,14 +41,14 @@ listDinoTypes = () => {
     return (
   
  
-      <div className="container">
+      <Container>
         <h2 className = 'text-center'>
           <br />
             What types of creatures are you looking for?<br />
             </h2>  
-        <div><DinoTypesList listDinoTypes={this.listDinoTypes()}/></div>
+        <DinoTypesList listDinoTypes={this.listDinoTypes()}/>
         <br />
-        </div>
+        </Container>
  
     )
   }

@@ -5,6 +5,8 @@
   position: relative;
   border: 3px solid green;
   padding: 0%;
+  /* display: flex; */
+  justify-content: center;
 }
 
 .center {

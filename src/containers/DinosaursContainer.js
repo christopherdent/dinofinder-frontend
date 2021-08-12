@@ -78,6 +78,8 @@ listDinos = () => {
 
 
       </Container>
+
+      
 </React.Fragment>
       )
     }
