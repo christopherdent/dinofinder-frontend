@@ -5,6 +5,7 @@ import {connect} from 'react-redux'
 import DinoTypesList from '../components/DinoTypesList'
 import {fetchDinoTypes} from '../actions/fetchDinoTypes'
 import { Container } from 'react-bootstrap';
+import LoadingIndicator from '../components/LoadingIndicator'
 
 class DinoTypesContainer extends React.Component {
 
@@ -42,6 +43,7 @@ listDinoTypes = () => {
   
 <React.Fragment> 
       <Container>
+      <LoadingIndicator />
         <h2 className = 'text-center'>
           <br />
             What types of creatures are you looking for?<br /><br />

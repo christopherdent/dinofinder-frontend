@@ -5,7 +5,6 @@ import {fetchEras} from '../actions/fetchEras'
 import EraCard from '../components/EraCard'
 import { trackPromise } from 'react-promise-tracker';
 import {Container } from 'react-bootstrap'
-
 import LoadingIndicator from '../components/LoadingIndicator'
 
 class ErasContainer extends React.Component {
