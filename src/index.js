@@ -10,8 +10,7 @@ import { combineReducers } from "redux";
 import App from './App';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { usePromiseTracker } from "react-promise-tracker";
-import Loader from 'react-loader-spinner';
+ 
 
 const rootReducer = combineReducers({
   eras: erasReducer, //this causes the unwanted nesting.
@@ -23,31 +22,13 @@ const composeEnhancers =  window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 
 let store = createStore(rootReducer, composeEnhancers(applyMiddleware(thunk)))
 
-const LoadingIndicator = props => {
-    const { promiseInProgress } = usePromiseTracker();
-  
-     return promiseInProgress && 
-   
-      <div
-      style = {{
-        width: "100%",
-        height: "100",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center"
-      }}
-      >
-        
-        <Loader type="Circles" color="#00008b" height="300" width="300" />
-        </div>
-
-   }
+ 
 
 ReactDOM.render(
   
     <Provider store = { store }>
       <App />
-      <LoadingIndicator/>
+      
     </Provider>,
   document.getElementById('root')
 );

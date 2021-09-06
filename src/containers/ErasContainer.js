@@ -6,6 +6,8 @@ import EraCard from '../components/EraCard'
 import { trackPromise } from 'react-promise-tracker';
 import {Container } from 'react-bootstrap'
 
+import LoadingIndicator from '../components/LoadingIndicator'
+
 class ErasContainer extends React.Component {
 
 
@@ -33,7 +35,7 @@ class ErasContainer extends React.Component {
     return (
 
     <Container>
-
+<LoadingIndicator />
       <h2 className = 'text-center'>
         Choose an Era to Begin <br /><br /><br />
       </h2>
