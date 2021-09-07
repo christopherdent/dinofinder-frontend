@@ -34,11 +34,11 @@ class ErasContainer extends React.Component {
     return (
 
     <Container>
-<LoadingIndicator />
+
       <h2 className = 'text-center'>
         Choose an Era to Begin <br /><br /><br />
       </h2>
-   
+      <LoadingIndicator /> 
         <div>
           <ErasList listEras={this.listEras()}/>
         </div>
