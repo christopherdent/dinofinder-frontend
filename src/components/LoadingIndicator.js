@@ -29,10 +29,10 @@ const LoadingIndicator = (props) => {
 
     
     return (
-
-<LoadingIndicator />
-
-
+      <>
+        <LoadingIndicator />
+        <br />
+      </>
 
 
   
