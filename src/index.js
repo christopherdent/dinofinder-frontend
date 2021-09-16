@@ -9,6 +9,7 @@ import dinoTypesReducer from './reducers/dinoTypesReducer'
 import { combineReducers } from "redux";
 import App from './App';
 
+
 import 'bootstrap/dist/css/bootstrap.min.css';
  
 
