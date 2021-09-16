@@ -24,11 +24,16 @@
 #main-heading {
   font-family: 'dinosaur', sans-serif !important;
   font-size: 7vw;
+  
 }
 
 #root > div > div.container > h2 {
   font-family: 'dino', sans-serif !important;
-  font-size: 2.5vw;
+  font-size: 2vw;
+}
+
+#root > div > div.jumbotron > a {
+  text-decoration: none;
 }
 
 

@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.js": "/dinofinder-frontend/static/js/main.aad42472.chunk.js",
-    "main.js.map": "/dinofinder-frontend/static/js/main.aad42472.chunk.js.map",
+    "main.js": "/dinofinder-frontend/static/js/main.a9e636b5.chunk.js",
+    "main.js.map": "/dinofinder-frontend/static/js/main.a9e636b5.chunk.js.map",
     "runtime-main.js": "/dinofinder-frontend/static/js/runtime-main.cba048cb.js",
     "runtime-main.js.map": "/dinofinder-frontend/static/js/runtime-main.cba048cb.js.map",
     "static/css/2.081f420c.chunk.css": "/dinofinder-frontend/static/css/2.081f420c.chunk.css",
-    "static/js/2.d5559a35.chunk.js": "/dinofinder-frontend/static/js/2.d5559a35.chunk.js",
-    "static/js/2.d5559a35.chunk.js.map": "/dinofinder-frontend/static/js/2.d5559a35.chunk.js.map",
+    "static/js/2.763b6d56.chunk.js": "/dinofinder-frontend/static/js/2.763b6d56.chunk.js",
+    "static/js/2.763b6d56.chunk.js.map": "/dinofinder-frontend/static/js/2.763b6d56.chunk.js.map",
     "index.html": "/dinofinder-frontend/index.html",
     "static/css/2.081f420c.chunk.css.map": "/dinofinder-frontend/static/css/2.081f420c.chunk.css.map",
-    "static/js/2.d5559a35.chunk.js.LICENSE.txt": "/dinofinder-frontend/static/js/2.d5559a35.chunk.js.LICENSE.txt"
+    "static/js/2.763b6d56.chunk.js.LICENSE.txt": "/dinofinder-frontend/static/js/2.763b6d56.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.cba048cb.js",
     "static/css/2.081f420c.chunk.css",
-    "static/js/2.d5559a35.chunk.js",
-    "static/js/main.aad42472.chunk.js"
+    "static/js/2.763b6d56.chunk.js",
+    "static/js/main.a9e636b5.chunk.js"
   ]
 }
