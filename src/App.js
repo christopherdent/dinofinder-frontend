@@ -8,17 +8,21 @@ import DinosaurEdit from './components/DinosaurEdit'
 import {BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import { Link } from 'react-router-dom';
 import { Jumbotron } from 'react-bootstrap'
-
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger'
+import Tooltip from 'react-bootstrap/Tooltip'
 
 class App extends React.Component {
-  // constructor(){
-  //   super()
-  // }
+  
 
 componentDidMount(){
   document.getElementById('main-heading').click();
 }
 
+renderTooltip = (props) => (
+  <Tooltip {...props}>
+    Choose an Era...
+  </Tooltip>
+);
 
   render() {
     return (
@@ -26,12 +30,21 @@ componentDidMount(){
       <div className="App">
         <Jumbotron>
          
-        <Link to='/dinofinder-frontend'>
-        <h1 className='text-center' id="main-heading">DinoFinder 2020</h1>
+      <OverlayTrigger
+        placement="bottom"
+        delay={{ show: 250, hide: 400 }}
+        overlay={this.renderTooltip}
+      > 
 
+        <Link to='/dinofinder-frontend'>
+          <h1 className='text-center' id="main-heading">DinoFinder 2020</h1>
         </Link>
+        </OverlayTrigger>,
+  
       <br />
+  
         <center><h5>The prehistoric card collection anyone can edit!</h5></center>
+  
           </Jumbotron>
 
       <Switch>
