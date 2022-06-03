@@ -15,21 +15,27 @@
                             'embedded-opentype', and 'svg' */
 }
 
+#root > div > div.jumbotron {
+  background-color: #73A16C;
+   
+}
 
 #root > div > div.jumbotron > center > h5 {
   font-family: 'dino', sans-serif !important;
   font-size: 2.2vw;
+ 
 }
 
 #main-heading {
   font-family: 'dinosaur', sans-serif !important;
-  font-size: 7vw;
+  font-size: 4vw;
   
 }
 
 #root > div > div.container > h2 {
-  font-family: 'dino', sans-serif !important;
-  font-size: 2vw;
+  /* font-family: 'dino', sans-serif !important; */
+  font-size: 2vw;  
+  font-style: italic; 
 }
 
 #root > div > div.jumbotron > a {
@@ -41,7 +47,7 @@
  
   height: auto;
   position: relative;
-  border: 3px solid green;
+  border: none;
   padding: 0%;
   /* display: flex; */
   justify-content: center;
@@ -112,3 +118,18 @@
   
 }
 
+#era-text.text-center{
+  margin-top: 10px;
+}
+
+#era-card {
+  background-color: #dfdfdf;
+  padding: 10px;
+  padding-top: 25px;
+  border: none; 
+}
+
+.jumbotron {
+  height:auto;
+  padding:25px 0 !important;
+}

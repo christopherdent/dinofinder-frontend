@@ -29,7 +29,7 @@ export default function dinosaursResducer(state = { dinosaurs: [] }, action){
           }  ///either way we're chucking it into dinos.  we need a way to exclude it from dinos if it is a different era.
         })
 
-        let first = state.dinosaurs.[0].dino_type_id  ///finally solved it.  now you are creating dinos above and returning edits as needed but when you return the whole state, you make sure you only return the dinos with the proper category id based on item 0 in the array (if youre editing there will always be a 0.).
+        let first = state.dinosaurs?.[0].dino_type_id  ///finally solved it.  now you are creating dinos above and returning edits as needed but when you return the whole state, you make sure you only return the dinos with the proper category id based on item 0 in the array (if youre editing there will always be a 0.)
           return {...state, dinosaurs: dinos.filter(dino => dino.dino_type_id === first) }  //return state array with any updated dino card but WITHOUT any dinosaurs of another era (fixes era change bug)
 
 

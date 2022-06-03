@@ -37,13 +37,13 @@ renderTooltip = (props) => (
       > 
 
         <Link to='/dinofinder-frontend'>
-          <h1 className='text-center' id="main-heading">DinoFinder 2021</h1>
+          <h1 className='text-center' id="main-heading">D i n o F i n d e r </h1>
         </Link>
         </OverlayTrigger>,
   
       <br />
   
-        <center><h5>The prehistoric card collection anyone can edit!</h5></center>
+        <center><h5>The ancient creature collection anyone can edit!</h5></center>
   
           </Jumbotron>
 

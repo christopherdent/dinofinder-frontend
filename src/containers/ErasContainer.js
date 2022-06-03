@@ -36,7 +36,7 @@ class ErasContainer extends React.Component {
     <Container>
 <br />
       <h2 className = 'text-center'>
-        Choose an Era to Begin <br /><br />
+        choose an era to explore...<br /><br />
       </h2>
       <LoadingIndicator /> 
         <div>

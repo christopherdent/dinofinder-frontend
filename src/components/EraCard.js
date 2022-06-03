@@ -13,12 +13,12 @@ const EraCard = (props) => {
         key={props.id}
         style={{ width: '200' }}
         className="mb-2"
+        id="era-card"
         >
       <Link to={`./${props.name}/dino_types`}>
         <Card.Img src={props.pictureUrl} alt='prehistoric world' />
-
-          <Card.Title>
-        <h4 className = 'text-center'>{props.name}</h4>
+         <Card.Title>
+        <h4 className = 'text-center' id='era-text'>{props.name}</h4>
         </Card.Title>
         </Link>
       </Card>
