@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.js": "/dinofinder-frontend/static/js/main.4910d9f5.chunk.js",
-    "main.js.map": "/dinofinder-frontend/static/js/main.4910d9f5.chunk.js.map",
-    "runtime-main.js": "/dinofinder-frontend/static/js/runtime-main.fed403c8.js",
-    "runtime-main.js.map": "/dinofinder-frontend/static/js/runtime-main.fed403c8.js.map",
-    "static/css/2.d6008dad.chunk.css": "/dinofinder-frontend/static/css/2.d6008dad.chunk.css",
-    "static/js/2.6fa986c1.chunk.js": "/dinofinder-frontend/static/js/2.6fa986c1.chunk.js",
-    "static/js/2.6fa986c1.chunk.js.map": "/dinofinder-frontend/static/js/2.6fa986c1.chunk.js.map",
+    "main.js": "/dinofinder-frontend/static/js/main.8ba8dd81.chunk.js",
+    "main.js.map": "/dinofinder-frontend/static/js/main.8ba8dd81.chunk.js.map",
+    "runtime-main.js": "/dinofinder-frontend/static/js/runtime-main.d973eaad.js",
+    "runtime-main.js.map": "/dinofinder-frontend/static/js/runtime-main.d973eaad.js.map",
+    "static/css/2.44d809a4.chunk.css": "/dinofinder-frontend/static/css/2.44d809a4.chunk.css",
+    "static/js/2.f55ec22f.chunk.js": "/dinofinder-frontend/static/js/2.f55ec22f.chunk.js",
+    "static/js/2.f55ec22f.chunk.js.map": "/dinofinder-frontend/static/js/2.f55ec22f.chunk.js.map",
     "index.html": "/dinofinder-frontend/index.html",
-    "static/css/2.d6008dad.chunk.css.map": "/dinofinder-frontend/static/css/2.d6008dad.chunk.css.map",
-    "static/js/2.6fa986c1.chunk.js.LICENSE.txt": "/dinofinder-frontend/static/js/2.6fa986c1.chunk.js.LICENSE.txt"
+    "static/css/2.44d809a4.chunk.css.map": "/dinofinder-frontend/static/css/2.44d809a4.chunk.css.map",
+    "static/js/2.f55ec22f.chunk.js.LICENSE.txt": "/dinofinder-frontend/static/js/2.f55ec22f.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.fed403c8.js",
-    "static/css/2.d6008dad.chunk.css",
-    "static/js/2.6fa986c1.chunk.js",
-    "static/js/main.4910d9f5.chunk.js"
+    "static/js/runtime-main.d973eaad.js",
+    "static/css/2.44d809a4.chunk.css",
+    "static/js/2.f55ec22f.chunk.js",
+    "static/js/main.8ba8dd81.chunk.js"
   ]
 }
